@@ -4,11 +4,23 @@
 The SPDX license-text corpus (`src/licenses/`) is the generator's authoritative source for rendering the `Licenses` section of `NOTICE.md`. It is committed to the repo — not fetched at runtime — so that NOTICE generation is deterministic and works offline.
 
 ## Contents
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_16:40:00 -->
 
 - `src/licenses/index.json` — 658 entries of the form `{spdxId, name, category}`. Derived from SonarQube's internal catalog.
 - `src/licenses/texts/<SPDX_ID>.txt` — 650 canonical license texts pulled from `https://raw.githubusercontent.com/spdx/license-list-data/main/text/<ID>.txt`.
 - `src/licenses/manifest.json` — audit record: `generatedAt`, list of aliased ids, list of missing ids.
+
+### Coverage vs. live SonarQube catalog (audited 2026-04-21)
+<!-- updated: 2026-04-21_16:40:00 -->
+
+A live `GET /api/v2/sca/license-profiles/<id>` currently returns **662** entries. The local corpus covers 650 of those directly plus 8 via blockquote fallback (see *Missing ids* below). The remaining 4 are non-SPDX entries that are **not** in `index.json` and have no local text:
+
+- `NONE` — SPDX "no license" marker, not a real license.
+- `LicenseRef-public-domain` — SPDX license-ref, no canonical text.
+- `LicenseRef-sonar-highcharts` — SonarQube-internal ref.
+- `LicenseRef-sonar-unboundid` — SonarQube-internal ref.
+
+These surface only in live SBOMs that assign the marker; they do not have upstream SPDX texts and are not expected to be added to `texts/`.
 
 ## How the corpus is built
 <!-- updated: 2026-04-21_15:25:00 -->
