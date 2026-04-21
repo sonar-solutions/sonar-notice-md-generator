@@ -1,4 +1,4 @@
-# sq-notice
+# SonarQube NOTICE.MD Generator
 
 Generate a `NOTICE.md` file for your project — the document that credits every open-source library you use and includes their license text.
 
