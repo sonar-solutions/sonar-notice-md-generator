@@ -1,0 +1,17 @@
+{
+  "generatedAt": "2026-04-21T06:52:38.076Z",
+  "source": "https://raw.githubusercontent.com/spdx/license-list-data/main/text/",
+  "totalRequested": 658,
+  "present": 650,
+  "missing": [
+    "BSD-2-Clause-FreeBSD",
+    "BSD-2-Clause-NetBSD",
+    "bzip2-1.0.5",
+    "eCos-2.0",
+    "Net-SNMP",
+    "Nunit",
+    "StandardML-NJ",
+    "wxWindows"
+  ],
+  "aliased": []
+}

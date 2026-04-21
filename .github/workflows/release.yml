@@ -1,0 +1,123 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag:
+        description: 'Tag to publish (e.g. v0.1.0). Leave blank to only build, not publish.'
+        required: false
+        default: ''
+
+jobs:
+  build:
+    name: Build cross-platform binaries
+    runs-on: macos-14
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20.20.1'
+
+      - name: Report versions
+        run: |
+          node --version
+          uname -a
+
+      - name: Build all 6 binaries
+        run: node build-all.js
+
+      - name: Show build output
+        run: |
+          ls -lh build/sq-notice-*
+          file build/sq-notice-*
+
+      - name: Generate SHA256 checksums
+        working-directory: build
+        run: |
+          shasum -a 256 sq-notice-darwin-x64 \
+                        sq-notice-darwin-arm64 \
+                        sq-notice-linux-x64 \
+                        sq-notice-linux-arm64 \
+                        sq-notice-win-x64.exe \
+                        sq-notice-win-arm64.exe \
+            > SHA256SUMS.txt
+          cat SHA256SUMS.txt
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sq-notice-binaries
+          path: |
+            build/sq-notice-darwin-x64
+            build/sq-notice-darwin-arm64
+            build/sq-notice-linux-x64
+            build/sq-notice-linux-arm64
+            build/sq-notice-win-x64.exe
+            build/sq-notice-win-arm64.exe
+            build/SHA256SUMS.txt
+          if-no-files-found: error
+          retention-days: 14
+
+  release:
+    name: Publish GitHub Release
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/v') || (github.event_name == 'workflow_dispatch' && inputs.tag != '')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - name: Download binaries
+        uses: actions/download-artifact@v4
+        with:
+          name: sq-notice-binaries
+          path: dist
+
+      - name: Determine tag
+        id: tag
+        run: |
+          if [ -n "${{ inputs.tag }}" ]; then
+            echo "tag=${{ inputs.tag }}" >> "$GITHUB_OUTPUT"
+          else
+            echo "tag=${GITHUB_REF#refs/tags/}" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Publish release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.tag.outputs.tag }}
+          name: ${{ steps.tag.outputs.tag }}
+          generate_release_notes: true
+          files: |
+            dist/sq-notice-darwin-x64
+            dist/sq-notice-darwin-arm64
+            dist/sq-notice-linux-x64
+            dist/sq-notice-linux-arm64
+            dist/sq-notice-win-x64.exe
+            dist/sq-notice-win-arm64.exe
+            dist/SHA256SUMS.txt
+          body: |
+            ## Downloads
+
+            Pick the binary matching your operating system and CPU architecture:
+
+            | Platform | File |
+            | --- | --- |
+            | macOS · Apple Silicon (M1/M2/M3/M4) | `sq-notice-darwin-arm64` |
+            | macOS · Intel | `sq-notice-darwin-x64` |
+            | Linux · x86_64 (Intel/AMD) | `sq-notice-linux-x64` |
+            | Linux · aarch64 (ARM, e.g. Raspberry Pi 4/5, Graviton) | `sq-notice-linux-arm64` |
+            | Windows · x64 | `sq-notice-win-x64.exe` |
+            | Windows · ARM64 | `sq-notice-win-arm64.exe` |
+
+            `SHA256SUMS.txt` contains checksums — verify with `shasum -a 256 -c SHA256SUMS.txt` (macOS/Linux) or `certutil -hashfile <file> SHA256` (Windows).
+
+            **First-time setup:** See the [README](../../blob/main/README.md) for step-by-step download/install/run instructions (macOS quarantine removal, Linux `chmod +x`, Windows SmartScreen).
+
+            **Building from source:** `node build-all.js` — requires Node.js 20.10+.

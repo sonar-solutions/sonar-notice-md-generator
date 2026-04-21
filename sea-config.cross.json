@@ -1,0 +1,10 @@
+{
+  "main": "src/cli.js",
+  "output": "build/sea-prep.cross.blob",
+  "disableExperimentalSEAWarning": true,
+  "useSnapshot": false,
+  "useCodeCache": false,
+  "assets": {
+    "licenses.json": "build/licenses-bundle.json"
+  }
+}

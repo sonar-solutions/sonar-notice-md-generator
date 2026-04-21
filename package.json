@@ -1,0 +1,21 @@
+{
+  "name": "sq-notice",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Generate NOTICE.md from a SonarQube SBOM. Pure Node (no runtime dependencies), packaged as a Single Executable Application.",
+  "bin": {
+    "sq-notice": "src/cli.js"
+  },
+  "scripts": {
+    "start": "node src/cli.js",
+    "fetch-licenses": "node scripts/fetch-licenses.js",
+    "build-bundle": "node scripts/build-bundle.js",
+    "build": "node build.js",
+    "build:clean": "node build.js --clean",
+    "build:all": "node build-all.js",
+    "build:all:clean": "node build-all.js --clean"
+  },
+  "engines": {
+    "node": ">=20.10.0"
+  }
+}

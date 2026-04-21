@@ -1,0 +1,3292 @@
+[
+  {
+    "spdxId": "0BSD",
+    "name": "BSD Zero Clause License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "3D-Slicer-1.0",
+    "name": "3D Slicer License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "AAL",
+    "name": "Attribution Assurance License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Abstyles",
+    "name": "Abstyles License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "AdaCore-doc",
+    "name": "AdaCore Doc License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Adobe-2006",
+    "name": "Adobe Systems Incorporated Source Code License Agreement",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Adobe-Display-PostScript",
+    "name": "Adobe Display PostScript License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Adobe-Glyph",
+    "name": "Adobe Glyph List License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Adobe-Utopia",
+    "name": "Adobe Utopia Font License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ADSL",
+    "name": "Amazon Digital Services License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AFL-1.1",
+    "name": "Academic Free License v1.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AFL-1.2",
+    "name": "Academic Free License v1.2",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AFL-2.0",
+    "name": "Academic Free License v2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AFL-2.1",
+    "name": "Academic Free License v2.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AFL-3.0",
+    "name": "Academic Free License v3.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Afmparse",
+    "name": "Afmparse License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "AGPL-1.0-only",
+    "name": "Affero General Public License v1.0 only",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "AGPL-3.0-only",
+    "name": "GNU Affero General Public License v3.0 only",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "Aladdin",
+    "name": "Aladdin Free Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "AMD-newlib",
+    "name": "AMD newlib License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "AMDPLPA",
+    "name": "AMD's plpa_map.c License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AML",
+    "name": "Apple MIT License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "AML-glslang",
+    "name": "AML glslang variant License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "AMPAS",
+    "name": "Academy of Motion Picture Arts and Sciences BSD",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ANTLR-PD",
+    "name": "ANTLR Software Rights Notice",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ANTLR-PD-fallback",
+    "name": "ANTLR Software Rights Notice with license fallback",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "any-OSI",
+    "name": "Any OSI License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "any-OSI-perl-modules",
+    "name": "Any OSI License - Perl Modules",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Apache-1.0",
+    "name": "Apache License 1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Apache-1.1",
+    "name": "Apache License 1.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Apache-2.0",
+    "name": "Apache License 2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "APAFML",
+    "name": "Adobe Postscript AFM License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "APL-1.0",
+    "name": "Adaptive Public License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "App-s2p",
+    "name": "App::s2p License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "APSL-1.0",
+    "name": "Apple Public Source License 1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "APSL-1.1",
+    "name": "Apple Public Source License 1.1",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "APSL-1.2",
+    "name": "Apple Public Source License 1.2",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "APSL-2.0",
+    "name": "Apple Public Source License 2.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "Arphic-1999",
+    "name": "Arphic Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Artistic-1.0",
+    "name": "Artistic License 1.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Artistic-1.0-cl8",
+    "name": "Artistic License 1.0 w/clause 8",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Artistic-1.0-Perl",
+    "name": "Artistic License 1.0 (Perl)",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Artistic-2.0",
+    "name": "Artistic License 2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Artistic-dist",
+    "name": "Artistic License 1.0 (dist)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Aspell-RU",
+    "name": "Aspell Russian License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ASWF-Digital-Assets-1.0",
+    "name": "ASWF Digital Assets License version 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ASWF-Digital-Assets-1.1",
+    "name": "ASWF Digital Assets License 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Baekmuk",
+    "name": "Baekmuk License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Bahyph",
+    "name": "Bahyph License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Barr",
+    "name": "Barr License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "bcrypt-Solar-Designer",
+    "name": "bcrypt Solar Designer License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Beerware",
+    "name": "Beerware License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Bitstream-Charter",
+    "name": "Bitstream Charter Font License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Bitstream-Vera",
+    "name": "Bitstream Vera Font License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BitTorrent-1.0",
+    "name": "BitTorrent Open Source License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BitTorrent-1.1",
+    "name": "BitTorrent Open Source License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "blessing",
+    "name": "SQLite Blessing",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BlueOak-1.0.0",
+    "name": "Blue Oak Model License 1.0.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Boehm-GC",
+    "name": "Boehm-Demers-Weiser GC License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Boehm-GC-without-fee",
+    "name": "Boehm-Demers-Weiser GC License (without fee)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Borceux",
+    "name": "Borceux license",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Brian-Gladman-2-Clause",
+    "name": "Brian Gladman 2-Clause License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Brian-Gladman-3-Clause",
+    "name": "Brian Gladman 3-Clause License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-1-Clause",
+    "name": "BSD 1-Clause License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-2-Clause",
+    "name": "BSD 2-Clause \"Simplified\" License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-2-Clause-Darwin",
+    "name": "BSD 2-Clause - Ian Darwin variant",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "BSD-2-Clause-first-lines",
+    "name": "BSD 2-Clause - first lines requirement",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-2-Clause-FreeBSD",
+    "name": "BSD 2-Clause FreeBSD License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-2-Clause-NetBSD",
+    "name": "BSD 2-Clause NetBSD License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-2-Clause-Patent",
+    "name": "BSD-2-Clause Plus Patent License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-2-Clause-pkgconf-disclaimer",
+    "name": "BSD 2-Clause pkgconf disclaimer variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-2-Clause-Views",
+    "name": "BSD 2-Clause with views sentence",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause",
+    "name": "BSD 3-Clause \"New\" or \"Revised\" License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-acpica",
+    "name": "BSD 3-Clause acpica variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-3-Clause-Attribution",
+    "name": "BSD with attribution",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-Clear",
+    "name": "BSD 3-Clause Clear License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-flex",
+    "name": "BSD 3-Clause Flex variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-3-Clause-HP",
+    "name": "Hewlett-Packard BSD variant license",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-LBNL",
+    "name": "Lawrence Berkeley National Labs BSD variant license",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-Modification",
+    "name": "BSD 3-Clause Modification",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-No-Military-License",
+    "name": "BSD 3-Clause No Military License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-3-Clause-No-Nuclear-License",
+    "name": "BSD 3-Clause No Nuclear License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-No-Nuclear-License-2014",
+    "name": "BSD 3-Clause No Nuclear License 2014",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-No-Nuclear-Warranty",
+    "name": "BSD 3-Clause No Nuclear Warranty",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-Open-MPI",
+    "name": "BSD 3-Clause Open MPI variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-3-Clause-Sun",
+    "name": "BSD 3-Clause Sun Microsystems",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-4-Clause",
+    "name": "BSD 4-Clause \"Original\" or \"Old\" License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-4-Clause-Shortened",
+    "name": "BSD 4 Clause Shortened",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-4-Clause-UC",
+    "name": "BSD-4-Clause (University of California-Specific)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-4.3RENO",
+    "name": "BSD 4.3 RENO License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-4.3TAHOE",
+    "name": "BSD 4.3 TAHOE License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Advertising-Acknowledgement",
+    "name": "BSD Advertising Acknowledgement License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Attribution-HPND-disclaimer",
+    "name": "BSD with Attribution and HPND disclaimer",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Inferno-Nettverk",
+    "name": "BSD-Inferno-Nettverk",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Protection",
+    "name": "BSD Protection License",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "BSD-Source-beginning-file",
+    "name": "BSD Source Code Attribution - beginning of file variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Source-Code",
+    "name": "BSD Source Code Attribution",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BSD-Systemics",
+    "name": "Systemics BSD variant license",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSD-Systemics-W3Works",
+    "name": "Systemics W3Works BSD variant license",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "BSL-1.0",
+    "name": "Boost Software License 1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "BUSL-1.1",
+    "name": "Business Source License 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "bzip2-1.0.5",
+    "name": "bzip2 and libbzip2 License v1.0.5",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "bzip2-1.0.6",
+    "name": "bzip2 and libbzip2 License v1.0.6",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "C-UDA-1.0",
+    "name": "Computational Use of Data Agreement v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CAL-1.0",
+    "name": "Cryptographic Autonomy License 1.0",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "CAL-1.0-Combined-Work-Exception",
+    "name": "Cryptographic Autonomy License 1.0 (Combined Work Exception)",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "Caldera",
+    "name": "Caldera License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Caldera-no-preamble",
+    "name": "Caldera License (without preamble)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Catharon",
+    "name": "Catharon License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CATOSL-1.1",
+    "name": "Computer Associates Trusted Open Source License 1.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CC-BY-1.0",
+    "name": "Creative Commons Attribution 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-2.0",
+    "name": "Creative Commons Attribution 2.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-2.5",
+    "name": "Creative Commons Attribution 2.5 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-2.5-AU",
+    "name": "Creative Commons Attribution 2.5 Australia",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0",
+    "name": "Creative Commons Attribution 3.0 Unported",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-AT",
+    "name": "Creative Commons Attribution 3.0 Austria",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-AU",
+    "name": "Creative Commons Attribution 3.0 Australia",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-DE",
+    "name": "Creative Commons Attribution 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-IGO",
+    "name": "Creative Commons Attribution 3.0 IGO",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-NL",
+    "name": "Creative Commons Attribution 3.0 Netherlands",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-3.0-US",
+    "name": "Creative Commons Attribution 3.0 United States",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-4.0",
+    "name": "Creative Commons Attribution 4.0 International",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-1.0",
+    "name": "Creative Commons Attribution Non Commercial 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-2.0",
+    "name": "Creative Commons Attribution Non Commercial 2.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-2.5",
+    "name": "Creative Commons Attribution Non Commercial 2.5 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-3.0",
+    "name": "Creative Commons Attribution Non Commercial 3.0 Unported",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-3.0-DE",
+    "name": "Creative Commons Attribution Non Commercial 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-4.0",
+    "name": "Creative Commons Attribution Non Commercial 4.0 International",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-1.0",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-2.0",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 2.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-2.5",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 2.5 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-3.0",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 3.0 Unported",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-3.0-DE",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-3.0-IGO",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 3.0 IGO",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-ND-4.0",
+    "name": "Creative Commons Attribution Non Commercial No Derivatives 4.0 International",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-1.0",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-2.0",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 2.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-2.0-DE",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 2.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-2.0-FR",
+    "name": "Creative Commons Attribution-NonCommercial-ShareAlike 2.0 France",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-2.0-UK",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 2.0 England and Wales",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-2.5",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 2.5 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-3.0",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 3.0 Unported",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-3.0-DE",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-3.0-IGO",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 3.0 IGO",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-NC-SA-4.0",
+    "name": "Creative Commons Attribution Non Commercial Share Alike 4.0 International",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-1.0",
+    "name": "Creative Commons Attribution No Derivatives 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-2.0",
+    "name": "Creative Commons Attribution No Derivatives 2.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-2.5",
+    "name": "Creative Commons Attribution No Derivatives 2.5 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-3.0",
+    "name": "Creative Commons Attribution No Derivatives 3.0 Unported",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-3.0-DE",
+    "name": "Creative Commons Attribution No Derivatives 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-ND-4.0",
+    "name": "Creative Commons Attribution No Derivatives 4.0 International",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-1.0",
+    "name": "Creative Commons Attribution Share Alike 1.0 Generic",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "CC-BY-SA-2.0",
+    "name": "Creative Commons Attribution Share Alike 2.0 Generic",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "CC-BY-SA-2.0-UK",
+    "name": "Creative Commons Attribution Share Alike 2.0 England and Wales",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-2.1-JP",
+    "name": "Creative Commons Attribution Share Alike 2.1 Japan",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-2.5",
+    "name": "Creative Commons Attribution Share Alike 2.5 Generic",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "CC-BY-SA-3.0",
+    "name": "Creative Commons Attribution Share Alike 3.0 Unported",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "CC-BY-SA-3.0-AT",
+    "name": "Creative Commons Attribution Share Alike 3.0 Austria",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-3.0-DE",
+    "name": "Creative Commons Attribution Share Alike 3.0 Germany",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-3.0-IGO",
+    "name": "Creative Commons Attribution-ShareAlike 3.0 IGO",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-BY-SA-4.0",
+    "name": "Creative Commons Attribution Share Alike 4.0 International",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "CC-PDDC",
+    "name": "Creative Commons Public Domain Dedication and Certification",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "CC-PDM-1.0",
+    "name": "Creative    Commons Public Domain Mark 1.0 Universal",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC-SA-1.0",
+    "name": "Creative Commons Share Alike 1.0 Generic",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CC0-1.0",
+    "name": "Creative Commons Zero v1.0 Universal",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "CDDL-1.0",
+    "name": "Common Development and Distribution License 1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CDDL-1.1",
+    "name": "Common Development and Distribution License 1.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CDL-1.0",
+    "name": "Common Documentation License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CDLA-Permissive-1.0",
+    "name": "Community Data License Agreement Permissive 1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "CDLA-Permissive-2.0",
+    "name": "Community Data License Agreement Permissive 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CDLA-Sharing-1.0",
+    "name": "Community Data License Agreement Sharing 1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "CECILL-1.0",
+    "name": "CeCILL Free Software License Agreement v1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CECILL-1.1",
+    "name": "CeCILL Free Software License Agreement v1.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CECILL-2.0",
+    "name": "CeCILL Free Software License Agreement v2.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CECILL-2.1",
+    "name": "CeCILL Free Software License Agreement v2.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CECILL-B",
+    "name": "CeCILL-B Free Software License Agreement",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "CECILL-C",
+    "name": "CeCILL-C Free Software License Agreement",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CERN-OHL-1.1",
+    "name": "CERN Open Hardware Licence v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CERN-OHL-1.2",
+    "name": "CERN Open Hardware Licence v1.2",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CERN-OHL-P-2.0",
+    "name": "CERN Open Hardware Licence Version 2 - Permissive",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CERN-OHL-S-2.0",
+    "name": "CERN Open Hardware Licence Version 2 - Strongly Reciprocal",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CERN-OHL-W-2.0",
+    "name": "CERN Open Hardware Licence Version 2 - Weakly Reciprocal",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CFITSIO",
+    "name": "CFITSIO License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "check-cvs",
+    "name": "check-cvs License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "checkmk",
+    "name": "Checkmk License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ClArtistic",
+    "name": "Clarified Artistic License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Clips",
+    "name": "Clips License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "CMU-Mach",
+    "name": "CMU Mach License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CMU-Mach-nodoc",
+    "name": "CMU    Mach - no notices-in-documentation variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CNRI-Jython",
+    "name": "CNRI Jython License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "CNRI-Python",
+    "name": "CNRI Python License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "CNRI-Python-GPL-Compatible",
+    "name": "CNRI Python Open Source GPL Compatible License Agreement",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "COIL-1.0",
+    "name": "Copyfree Open Innovation License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Community-Spec-1.0",
+    "name": "Community Specification License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Condor-1.1",
+    "name": "Condor Public License v1.1",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "copyleft-next-0.3.0",
+    "name": "copyleft-next 0.3.0",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "copyleft-next-0.3.1",
+    "name": "copyleft-next 0.3.1",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "Cornell-Lossless-JPEG",
+    "name": "Cornell Lossless JPEG License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CPAL-1.0",
+    "name": "Common Public Attribution License 1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "CPL-1.0",
+    "name": "Common Public License 1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "CPOL-1.02",
+    "name": "Code Project Open License 1.02",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Cronyx",
+    "name": "Cronyx License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Crossword",
+    "name": "Crossword License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "CryptoSwift",
+    "name": "CryptoSwift License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "CrystalStacker",
+    "name": "CrystalStacker License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "CUA-OPL-1.0",
+    "name": "CUA Office Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Cube",
+    "name": "Cube License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "curl",
+    "name": "curl License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "cve-tou",
+    "name": "Common Vulnerability Enumeration ToU License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "D-FSL-1.0",
+    "name": "Deutsche Freie Software Lizenz",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DEC-3-Clause",
+    "name": "DEC 3-Clause License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "diffmark",
+    "name": "diffmark license",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "DL-DE-BY-2.0",
+    "name": "Data licence Germany \u2013 attribution \u2013 version 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DL-DE-ZERO-2.0",
+    "name": "Data licence Germany \u2013 zero \u2013 version 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DOC",
+    "name": "DOC License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "DocBook-DTD",
+    "name": "DocBook DTD License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DocBook-Schema",
+    "name": "DocBook Schema License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DocBook-Stylesheet",
+    "name": "DocBook Stylesheet License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DocBook-XML",
+    "name": "DocBook XML License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Dotseqn",
+    "name": "Dotseqn License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DRL-1.0",
+    "name": "Detection Rule License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DRL-1.1",
+    "name": "Detection Rule License 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "DSDP",
+    "name": "DSDP License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "dtoa",
+    "name": "David M. Gay dtoa License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "dvipdfm",
+    "name": "dvipdfm License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "ECL-1.0",
+    "name": "Educational Community License v1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ECL-2.0",
+    "name": "Educational Community License v2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "eCos-2.0",
+    "name": "eCos license version 2.0",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "EFL-1.0",
+    "name": "Eiffel Forum License v1.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "EFL-2.0",
+    "name": "Eiffel Forum License v2.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "eGenix",
+    "name": "eGenix.com Public License 1.1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Elastic-2.0",
+    "name": "Elastic License 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Entessa",
+    "name": "Entessa Public License v1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "EPICS",
+    "name": "EPICS Open License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "EPL-1.0",
+    "name": "Eclipse Public License 1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "EPL-2.0",
+    "name": "Eclipse Public License 2.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "ErlPL-1.1",
+    "name": "Erlang Public License v1.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "etalab-2.0",
+    "name": "Etalab Open License 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "EUDatagrid",
+    "name": "EU DataGrid Software License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "EUPL-1.0",
+    "name": "European Union Public License 1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "EUPL-1.1",
+    "name": "European Union Public License 1.1",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "EUPL-1.2",
+    "name": "European Union Public License 1.2",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "Eurosym",
+    "name": "Eurosym License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Fair",
+    "name": "Fair License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "FBM",
+    "name": "Fuzzy Bitmap License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FDK-AAC",
+    "name": "Fraunhofer FDK AAC Codec Library",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Ferguson-Twofish",
+    "name": "Ferguson Twofish License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Frameworx-1.0",
+    "name": "Frameworx Open License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FreeBSD-DOC",
+    "name": "FreeBSD Documentation License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FreeImage",
+    "name": "FreeImage Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FSFAP",
+    "name": "FSF All Permissive License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "FSFAP-no-warranty-disclaimer",
+    "name": "FSF All Permissive License (without Warranty)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FSFUL",
+    "name": "FSF Unlimited License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "FSFULLR",
+    "name": "FSF Unlimited License (with License Retention)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "FSFULLRSD",
+    "name": "FSF Unlimited License (with License Retention and Short Disclaimer)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FSFULLRWD",
+    "name": "FSF Unlimited License (With License Retention and Warranty Disclaimer)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FSL-1.1-ALv2",
+    "name": "Functional Source License, Version 1.1, ALv2 Future License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FSL-1.1-MIT",
+    "name": "Functional Source License, Version 1.1, MIT Future License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "FTL",
+    "name": "Freetype Project License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Furuseth",
+    "name": "Furuseth License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "fwlw",
+    "name": "fwlw License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Game-Programming-Gems",
+    "name": "Game Programming Gems License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "GCR-docs",
+    "name": "Gnome GCR Documentation License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "GD",
+    "name": "GD License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "generic-xts",
+    "name": "Generic XTS License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "GFDL-1.1-invariants-only",
+    "name": "GNU Free Documentation License v1.1 only - invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.1-no-invariants-only",
+    "name": "GNU Free Documentation License v1.1 only - no invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.1-only",
+    "name": "GNU Free Documentation License v1.1 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.2-invariants-only",
+    "name": "GNU Free Documentation License v1.2 only - invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.2-no-invariants-only",
+    "name": "GNU Free Documentation License v1.2 only - no invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.2-only",
+    "name": "GNU Free Documentation License v1.2 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.3-invariants-only",
+    "name": "GNU Free Documentation License v1.3 only - invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.3-no-invariants-only",
+    "name": "GNU Free Documentation License v1.3 only - no invariants",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "GFDL-1.3-only",
+    "name": "GNU Free Documentation License v1.3 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "Giftware",
+    "name": "Giftware License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "GL2PS",
+    "name": "GL2PS License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Glide",
+    "name": "3dfx Glide License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Glulxe",
+    "name": "Glulxe License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "GLWTPL",
+    "name": "Good Luck With That Public License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "gnuplot",
+    "name": "gnuplot License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "GPL-1.0-only",
+    "name": "GNU General Public License v1.0 only",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "GPL-2.0-only",
+    "name": "GNU General Public License v2.0 only",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "GPL-3.0-only",
+    "name": "GNU General Public License v3.0 only",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "Graphics-Gems",
+    "name": "Graphics Gems License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "gSOAP-1.3b",
+    "name": "gSOAP Public License v1.3b",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "gtkbook",
+    "name": "gtkbook License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Gutmann",
+    "name": "Gutmann License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HaskellReport",
+    "name": "Haskell Language Report License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HDF5",
+    "name": "HDF5 License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "hdparm",
+    "name": "hdparm License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "HIDAPI",
+    "name": "HIDAPI License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Hippocratic-2.1",
+    "name": "Hippocratic License 2.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HP-1986",
+    "name": "Hewlett-Packard 1986 License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HP-1989",
+    "name": "Hewlett-Packard 1989 License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND",
+    "name": "Historical Permission Notice and Disclaimer",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "HPND-DEC",
+    "name": "Historical Permission Notice and Disclaimer - DEC variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-doc",
+    "name": "Historical Permission Notice and Disclaimer - documentation variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-doc-sell",
+    "name": "Historical Permission Notice and Disclaimer - documentation sell variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-export-US",
+    "name": "HPND with US Government export control warning",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "HPND-export-US-acknowledgement",
+    "name": "HPND with US Government export control warning and acknowledgment",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-export-US-modify",
+    "name": "HPND with US Government export control warning and modification rqmt",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-export2-US",
+    "name": "HPND with US Government export control and 2 disclaimers",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Fenneberg-Livingston",
+    "name": "Historical Permission Notice and Disclaimer - Fenneberg-Livingston variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "HPND-INRIA-IMAG",
+    "name": "Historical Permission Notice and Disclaimer    - INRIA-IMAG variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Intel",
+    "name": "Historical Permission Notice and Disclaimer - Intel variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Kevlin-Henney",
+    "name": "Historical Permission Notice and Disclaimer - Kevlin Henney variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Markus-Kuhn",
+    "name": "Historical Permission Notice and Disclaimer - Markus Kuhn variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-merchantability-variant",
+    "name": "Historical Permission Notice and Disclaimer - merchantability variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-MIT-disclaimer",
+    "name": "Historical Permission Notice and Disclaimer with MIT disclaimer",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Netrek",
+    "name": "Historical Permission Notice and Disclaimer - Netrek variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-Pbmplus",
+    "name": "Historical Permission Notice and Disclaimer - Pbmplus variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-sell-MIT-disclaimer-xserver",
+    "name": "Historical Permission Notice and Disclaimer - sell xserver variant with MIT disclaimer",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-sell-regexpr",
+    "name": "Historical Permission Notice and Disclaimer - sell regexpr variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "HPND-sell-variant",
+    "name": "Historical Permission Notice and Disclaimer - sell variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-sell-variant-MIT-disclaimer",
+    "name": "HPND sell variant with MIT disclaimer",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-sell-variant-MIT-disclaimer-rev",
+    "name": "HPND sell variant with MIT disclaimer - reverse",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-UC",
+    "name": "Historical Permission Notice and Disclaimer - University of California variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HPND-UC-export-US",
+    "name": "Historical Permission Notice and Disclaimer - University of California, US export warning",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "HTMLTIDY",
+    "name": "HTML Tidy License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "IBM-pibs",
+    "name": "IBM PowerPC Initialization and Boot Software",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ICU",
+    "name": "ICU License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "IEC-Code-Components-EULA",
+    "name": "IEC    Code Components End-user licence agreement",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "IJG",
+    "name": "Independent JPEG Group License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "IJG-short",
+    "name": "Independent JPEG Group License - short",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "ImageMagick",
+    "name": "ImageMagick License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "iMatix",
+    "name": "iMatix Standard Function Library Agreement",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Imlib2",
+    "name": "Imlib2 License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Info-ZIP",
+    "name": "Info-ZIP License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Inner-Net-2.0",
+    "name": "Inner Net License v2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "InnoSetup",
+    "name": "Inno Setup License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Intel",
+    "name": "Intel Open Source License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Intel-ACPI",
+    "name": "Intel ACPI Software License Agreement",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Interbase-1.0",
+    "name": "Interbase Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "IPA",
+    "name": "IPA Font License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "IPL-1.0",
+    "name": "IBM Public License v1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "ISC",
+    "name": "ISC License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ISC-Veillard",
+    "name": "ISC Veillard variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Jam",
+    "name": "Jam License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "JasPer-2.0",
+    "name": "JasPer License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "jove",
+    "name": "Jove License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "JPL-image",
+    "name": "JPL Image Use Policy",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "JPNIC",
+    "name": "Japan Network Information Center License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "JSON",
+    "name": "JSON License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Kastrup",
+    "name": "Kastrup License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Kazlib",
+    "name": "Kazlib License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Knuth-CTAN",
+    "name": "Knuth CTAN License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LAL-1.2",
+    "name": "Licence Art Libre 1.2",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LAL-1.3",
+    "name": "Licence Art Libre 1.3",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Latex2e",
+    "name": "Latex2e License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Latex2e-translated-notice",
+    "name": "Latex2e with translated notice permission",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Leptonica",
+    "name": "Leptonica License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "LGPL-2.0-only",
+    "name": "GNU Library General Public License v2 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "LGPL-2.1-only",
+    "name": "GNU Lesser General Public License v2.1 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "LGPL-3.0-only",
+    "name": "GNU Lesser General Public License v3.0 only",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "LGPLLR",
+    "name": "Lesser General Public License For Linguistic Resources",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Libpng",
+    "name": "libpng License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "libpng-1.6.35",
+    "name": "PNG Reference Library License v1 (for libpng 0.5 through 1.6.35)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "libpng-2.0",
+    "name": "PNG Reference Library version 2",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "libselinux-1.0",
+    "name": "libselinux public domain notice",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "libtiff",
+    "name": "libtiff License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "libutil-David-Nugent",
+    "name": "libutil David Nugent License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LiLiQ-P-1.1",
+    "name": "Licence Libre du Qu\u00e9bec \u2013 Permissive version 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LiLiQ-R-1.1",
+    "name": "Licence Libre du Qu\u00e9bec \u2013 R\u00e9ciprocit\u00e9 version 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LiLiQ-Rplus-1.1",
+    "name": "Licence Libre du Qu\u00e9bec \u2013 R\u00e9ciprocit\u00e9 forte version 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Linux-man-pages-1-para",
+    "name": "Linux man-pages - 1 paragraph",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Linux-man-pages-copyleft",
+    "name": "Linux man-pages Copyleft",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Linux-man-pages-copyleft-2-para",
+    "name": "Linux man-pages Copyleft - 2 paragraphs",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Linux-man-pages-copyleft-var",
+    "name": "Linux man-pages Copyleft Variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Linux-OpenIB",
+    "name": "Linux Kernel Variant of OpenIB.org license",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "LOOP",
+    "name": "Common Lisp LOOP License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPD-document",
+    "name": "LPD Documentation License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPL-1.0",
+    "name": "Lucent Public License Version 1.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "LPL-1.02",
+    "name": "Lucent Public License v1.02",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "LPPL-1.0",
+    "name": "LaTeX Project Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPPL-1.1",
+    "name": "LaTeX Project Public License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPPL-1.2",
+    "name": "LaTeX Project Public License v1.2",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPPL-1.3a",
+    "name": "LaTeX Project Public License v1.3a",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LPPL-1.3c",
+    "name": "LaTeX Project Public License v1.3c",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "lsof",
+    "name": "lsof License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Lucida-Bitmap-Fonts",
+    "name": "Lucida Bitmap Fonts License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LZMA-SDK-9.11-to-9.20",
+    "name": "LZMA SDK License (versions 9.11 to 9.20)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "LZMA-SDK-9.22",
+    "name": "LZMA SDK License (versions 9.22 and beyond)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Mackerras-3-Clause",
+    "name": "Mackerras 3-Clause License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Mackerras-3-Clause-acknowledgment",
+    "name": "Mackerras 3-Clause - acknowledgment variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "magaz",
+    "name": "magaz License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "mailprio",
+    "name": "mailprio License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MakeIndex",
+    "name": "MakeIndex License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "man2html",
+    "name": "man2html License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Martin-Birgmeier",
+    "name": "Martin Birgmeier License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "McPhee-slideshow",
+    "name": "McPhee Slideshow License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "metamail",
+    "name": "metamail License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Minpack",
+    "name": "Minpack License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MIPS",
+    "name": "MIPS License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MirOS",
+    "name": "The MirOS Licence",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "MIT",
+    "name": "MIT License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-0",
+    "name": "MIT No Attribution",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-advertising",
+    "name": "Enlightenment License (e16)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-Click",
+    "name": "MIT Click License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MIT-CMU",
+    "name": "CMU License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-enna",
+    "name": "enna License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-feh",
+    "name": "feh License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-Festival",
+    "name": "MIT Festival Variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MIT-Khronos-old",
+    "name": "MIT Khronos - old variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MIT-Modern-Variant",
+    "name": "MIT License Modern Variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-open-group",
+    "name": "MIT Open Group variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-testregex",
+    "name": "MIT testregex Variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MIT-Wu",
+    "name": "MIT Tom Wu Variant",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MITNFA",
+    "name": "MIT +no-false-attribs license",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MMIXware",
+    "name": "MMIXware License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Motosoto",
+    "name": "Motosoto License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MPEG-SSG",
+    "name": "MPEG Software Simulation",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "mpi-permissive",
+    "name": "mpi Permissive License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "mpich2",
+    "name": "mpich2 License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "MPL-1.0",
+    "name": "Mozilla Public License 1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "MPL-1.1",
+    "name": "Mozilla Public License 1.1",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "MPL-2.0",
+    "name": "Mozilla Public License 2.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "MPL-2.0-no-copyleft-exception",
+    "name": "Mozilla Public License 2.0 (no copyleft exception)",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "mplus",
+    "name": "mplus Font License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MS-LPL",
+    "name": "Microsoft Limited Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "MS-PL",
+    "name": "Microsoft Public License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MS-RL",
+    "name": "Microsoft Reciprocal License",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "MTLL",
+    "name": "Matrix Template Library License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MulanPSL-1.0",
+    "name": "Mulan Permissive Software License, Version 1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "MulanPSL-2.0",
+    "name": "Mulan Permissive Software License, Version 2",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Multics",
+    "name": "Multics License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Mup",
+    "name": "Mup License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NAIST-2003",
+    "name": "Nara Institute of Science and Technology License (2003)",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "NASA-1.3",
+    "name": "NASA Open Source Agreement 1.3",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Naumen",
+    "name": "Naumen Public License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NBPL-1.0",
+    "name": "Net Boolean Public License v1",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "NCBI-PD",
+    "name": "NCBI Public Domain Notice",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NCGL-UK-2.0",
+    "name": "Non-Commercial Government Licence",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NCL",
+    "name": "NCL Source Code License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NCSA",
+    "name": "University of Illinois/NCSA Open Source License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Net-SNMP",
+    "name": "Net-SNMP License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NetCDF",
+    "name": "NetCDF license",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Newsletr",
+    "name": "Newsletr License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "NGPL",
+    "name": "Nethack General Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ngrep",
+    "name": "ngrep License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NICTA-1.0",
+    "name": "NICTA Public Software License, Version 1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NIST-PD",
+    "name": "NIST Public Domain Notice",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NIST-PD-fallback",
+    "name": "NIST Public Domain Notice with license fallback",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NIST-Software",
+    "name": "NIST Software License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NLOD-1.0",
+    "name": "Norwegian Licence for Open Government Data (NLOD) 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NLOD-2.0",
+    "name": "Norwegian Licence for Open Government Data (NLOD) 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NLPL",
+    "name": "No Limit Public License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Nokia",
+    "name": "Nokia Open Source License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NOSL",
+    "name": "Netizen Open Source License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Noweb",
+    "name": "Noweb License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NPL-1.0",
+    "name": "Netscape Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NPL-1.1",
+    "name": "Netscape Public License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NPOSL-3.0",
+    "name": "Non-Profit Open Software License 3.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "NRL",
+    "name": "NRL License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "NTIA-PD",
+    "name": "NTIA Public Domain Notice",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "NTP",
+    "name": "NTP License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "NTP-0",
+    "name": "NTP No Attribution",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Nunit",
+    "name": "Nunit License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "O-UDA-1.0",
+    "name": "Open Use of Data Agreement v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OAR",
+    "name": "OAR License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OCCT-PL",
+    "name": "Open CASCADE Technology Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OCLC-2.0",
+    "name": "OCLC Research Public License 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ODbL-1.0",
+    "name": "Open Data Commons Open Database License v1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "ODC-By-1.0",
+    "name": "Open Data Commons Attribution License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OFFIS",
+    "name": "OFFIS License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OFL-1.0",
+    "name": "SIL Open Font License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OFL-1.0-no-RFN",
+    "name": "SIL Open Font License 1.0 with no Reserved Font Name",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OFL-1.0-RFN",
+    "name": "SIL Open Font License 1.0 with Reserved Font Name",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OFL-1.1",
+    "name": "SIL Open Font License 1.1",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OFL-1.1-no-RFN",
+    "name": "SIL Open Font License 1.1 with no Reserved Font Name",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OFL-1.1-RFN",
+    "name": "SIL Open Font License 1.1 with Reserved Font Name",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGC-1.0",
+    "name": "OGC Software License, Version 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGDL-Taiwan-1.0",
+    "name": "Taiwan Open Government Data License, version 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGL-Canada-2.0",
+    "name": "Open Government Licence - Canada",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OGL-UK-1.0",
+    "name": "Open Government Licence v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGL-UK-2.0",
+    "name": "Open Government Licence v2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGL-UK-3.0",
+    "name": "Open Government Licence v3.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OGTSL",
+    "name": "Open Group Test Suite License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OLDAP-1.1",
+    "name": "Open LDAP Public License v1.1",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OLDAP-1.2",
+    "name": "Open LDAP Public License v1.2",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OLDAP-1.3",
+    "name": "Open LDAP Public License v1.3",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OLDAP-1.4",
+    "name": "Open LDAP Public License v1.4",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "OLDAP-2.0",
+    "name": "Open LDAP Public License v2.0 (or possibly 2.0A and 2.0B)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.0.1",
+    "name": "Open LDAP Public License v2.0.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.1",
+    "name": "Open LDAP Public License v2.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.2",
+    "name": "Open LDAP Public License v2.2",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.2.1",
+    "name": "Open LDAP Public License v2.2.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.2.2",
+    "name": "Open LDAP Public License 2.2.2",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.3",
+    "name": "Open LDAP Public License v2.3",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.4",
+    "name": "Open LDAP Public License v2.4",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.5",
+    "name": "Open LDAP Public License v2.5",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.6",
+    "name": "Open LDAP Public License v2.6",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.7",
+    "name": "Open LDAP Public License v2.7",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLDAP-2.8",
+    "name": "Open LDAP Public License v2.8",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OLFL-1.3",
+    "name": "Open Logistics Foundation License Version 1.3",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OML",
+    "name": "Open Market License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OpenPBS-2.3",
+    "name": "OpenPBS v2.3 Software License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OpenSSL",
+    "name": "OpenSSL License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "OpenSSL-standalone",
+    "name": "OpenSSL License - standalone",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OpenVision",
+    "name": "OpenVision License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OPL-1.0",
+    "name": "Open Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OPL-UK-3.0",
+    "name": "United    Kingdom Open Parliament Licence v3.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OPUBL-1.0",
+    "name": "Open Publication License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OSET-PL-2.1",
+    "name": "OSET Public License version 2.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "OSL-1.0",
+    "name": "Open Software License 1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "OSL-1.1",
+    "name": "Open Software License 1.1",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "OSL-2.0",
+    "name": "Open Software License 2.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "OSL-2.1",
+    "name": "Open Software License 2.1",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "OSL-3.0",
+    "name": "Open Software License 3.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "PADL",
+    "name": "PADL License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Parity-6.0.0",
+    "name": "The Parity Public License 6.0.0",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "Parity-7.0.0",
+    "name": "The Parity Public License 7.0.0",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "PDDL-1.0",
+    "name": "Open Data Commons Public Domain Dedication & License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "PHP-3.0",
+    "name": "PHP License v3.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "PHP-3.01",
+    "name": "PHP License v3.01",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Pixar",
+    "name": "Pixar License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "pkgconf",
+    "name": "pkgconf License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Plexus",
+    "name": "Plexus Classworlds License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "pnmstitch",
+    "name": "pnmstitch License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "PolyForm-Noncommercial-1.0.0",
+    "name": "PolyForm Noncommercial License 1.0.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "PolyForm-Small-Business-1.0.0",
+    "name": "PolyForm Small Business License 1.0.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "PostgreSQL",
+    "name": "PostgreSQL License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "PPL",
+    "name": "Peer Production License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "PSF-2.0",
+    "name": "Python Software Foundation License 2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "psfrag",
+    "name": "psfrag License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "psutils",
+    "name": "psutils License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Python-2.0",
+    "name": "Python License 2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Python-2.0.1",
+    "name": "Python License 2.0.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "python-ldap",
+    "name": "Python ldap License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Qhull",
+    "name": "Qhull License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "QPL-1.0",
+    "name": "Q Public License 1.0",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "QPL-1.0-INRIA-2004",
+    "name": "Q Public License 1.0 - INRIA 2004 variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "radvd",
+    "name": "radvd License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Rdisc",
+    "name": "Rdisc License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "RHeCos-1.1",
+    "name": "Red Hat eCos Public License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "RPL-1.1",
+    "name": "Reciprocal Public License 1.1",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "RPL-1.5",
+    "name": "Reciprocal Public License 1.5",
+    "category": "COPYLEFT_MAXIMAL"
+  },
+  {
+    "spdxId": "RPSL-1.0",
+    "name": "RealNetworks Public Source License v1.0",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "RSA-MD",
+    "name": "RSA Message-Digest License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "RSCPL",
+    "name": "Ricoh Source Code Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Ruby",
+    "name": "Ruby License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Ruby-pty",
+    "name": "Ruby pty extension license",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SAX-PD",
+    "name": "Sax Public Domain Notice",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SAX-PD-2.0",
+    "name": "Sax Public Domain Notice 2.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Saxpath",
+    "name": "Saxpath License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SCEA",
+    "name": "SCEA Shared Source License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SchemeReport",
+    "name": "Scheme Language Report License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sendmail",
+    "name": "Sendmail License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sendmail-8.23",
+    "name": "Sendmail License 8.23",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sendmail-Open-Source-1.1",
+    "name": "Sendmail Open Source License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SGI-B-1.0",
+    "name": "SGI Free Software License B v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SGI-B-1.1",
+    "name": "SGI Free Software License B v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SGI-B-2.0",
+    "name": "SGI Free Software License B v2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SGI-OpenGL",
+    "name": "SGI OpenGL License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SGP4",
+    "name": "SGP4 Permission Notice",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SHL-0.5",
+    "name": "Solderpad Hardware License v0.5",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SHL-0.51",
+    "name": "Solderpad Hardware License, Version 0.51",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SimPL-2.0",
+    "name": "Simple Public License 2.0",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "SISSL",
+    "name": "Sun Industry Standards Source License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SISSL-1.2",
+    "name": "Sun Industry Standards Source License v1.2",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SL",
+    "name": "SL License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sleepycat",
+    "name": "Sleepycat License",
+    "category": "COPYLEFT_STRONG"
+  },
+  {
+    "spdxId": "SMAIL-GPL",
+    "name": "SMAIL General Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SMLNJ",
+    "name": "Standard ML of New Jersey License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SMPPL",
+    "name": "Secure Messaging Protocol Public License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SNIA",
+    "name": "SNIA Public License 1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "snprintf",
+    "name": "snprintf License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "SOFA",
+    "name": "SOFA Software License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "softSurfer",
+    "name": "softSurfer License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Soundex",
+    "name": "Soundex License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Spencer-86",
+    "name": "Spencer License 86",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Spencer-94",
+    "name": "Spencer License 94",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Spencer-99",
+    "name": "Spencer License 99",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SPL-1.0",
+    "name": "Sun Public License v1.0",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "ssh-keyscan",
+    "name": "ssh-keyscan License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SSH-OpenSSH",
+    "name": "SSH OpenSSH license",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SSH-short",
+    "name": "SSH short notice",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "SSLeay-standalone",
+    "name": "SSLeay License - standalone",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SSPL-1.0",
+    "name": "Server Side Public License, v 1",
+    "category": "COPYLEFT_NETWORK"
+  },
+  {
+    "spdxId": "StandardML-NJ",
+    "name": "Standard ML of New Jersey License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SugarCRM-1.1.3",
+    "name": "SugarCRM Public License v1.1.3",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SUL-1.0",
+    "name": "Sustainable Use License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sun-PPP",
+    "name": "Sun PPP License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Sun-PPP-2000",
+    "name": "Sun PPP License (2000)",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "SunPro",
+    "name": "SunPro License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "SWL",
+    "name": "Scheme Widget Library (SWL) Software License Agreement",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "swrule",
+    "name": "swrule License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Symlinks",
+    "name": "Symlinks License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "TAPR-OHL-1.0",
+    "name": "TAPR Open Hardware License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TCL",
+    "name": "TCL/TK License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "TCP-wrappers",
+    "name": "TCP Wrappers License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "TermReadKey",
+    "name": "TermReadKey License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TGPPL-1.0",
+    "name": "Transitive Grace Period Public Licence 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ThirdEye",
+    "name": "ThirdEye License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "threeparttable",
+    "name": "threeparttable License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TMate",
+    "name": "TMate Open Source License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TORQUE-1.1",
+    "name": "TORQUE v2.5+ Software License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TOSL",
+    "name": "Trusster Open Source License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TPDL",
+    "name": "Time::ParseDate License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TPL-1.0",
+    "name": "THOR Public License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TrustedQSL",
+    "name": "TrustedQSL License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TTWL",
+    "name": "Text-Tabs+Wrap License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TTYP0",
+    "name": "TTYP0 License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "TU-Berlin-1.0",
+    "name": "Technische Universitaet Berlin License 1.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "TU-Berlin-2.0",
+    "name": "Technische Universitaet Berlin License 2.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Ubuntu-font-1.0",
+    "name": "Ubuntu Font Licence v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "UCAR",
+    "name": "UCAR License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "UCL-1.0",
+    "name": "Upstream Compatibility License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "ulem",
+    "name": "ulem License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "UMich-Merit",
+    "name": "Michigan/Merit Networks License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Unicode-3.0",
+    "name": "Unicode License v3",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Unicode-DFS-2015",
+    "name": "Unicode License Agreement - Data Files and Software (2015)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Unicode-DFS-2016",
+    "name": "Unicode License Agreement - Data Files and Software (2016)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Unicode-TOU",
+    "name": "Unicode Terms of Use",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "UnixCrypt",
+    "name": "UnixCrypt License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Unlicense",
+    "name": "The Unlicense",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Unlicense-libtelnet",
+    "name": "Unlicense - libtelnet variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Unlicense-libwhirlpool",
+    "name": "Unlicense - libwhirlpool variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "UPL-1.0",
+    "name": "Universal Permissive License v1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "URT-RLE",
+    "name": "Utah Raster Toolkit Run Length Encoded License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Vim",
+    "name": "Vim License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "VOSTROM",
+    "name": "VOSTROM Public License for Open Source",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "VSL-1.0",
+    "name": "Vovida Software License v1.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "W3C",
+    "name": "W3C Software Notice and License (2002-12-31)",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "W3C-19980720",
+    "name": "W3C Software Notice and License (1998-07-20)",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "W3C-20150513",
+    "name": "W3C Software Notice and Document License (2015-05-13)",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "w3m",
+    "name": "w3m License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Watcom-1.0",
+    "name": "Sybase Open Watcom Public License 1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Widget-Workshop",
+    "name": "Widget Workshop License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Wsuipa",
+    "name": "Wsuipa License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "WTFPL",
+    "name": "Do What The F*ck You Want To Public License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "wwl",
+    "name": "WWL License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "wxWindows",
+    "name": "wxWindows Library License",
+    "category": "COPYLEFT_WEAK"
+  },
+  {
+    "spdxId": "X11",
+    "name": "X11 License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "X11-distribute-modifications-variant",
+    "name": "X11 License Distribution Modification Variant",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "X11-swapped",
+    "name": "X11 swapped final paragraphs",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Xdebug-1.03",
+    "name": "Xdebug License v 1.03",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Xerox",
+    "name": "Xerox License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Xfig",
+    "name": "Xfig License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "XFree86-1.1",
+    "name": "XFree86 License 1.1",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "xinetd",
+    "name": "xinetd License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "xkeyboard-config-Zinoviev",
+    "name": "xkeyboard-config Zinoviev License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "xlock",
+    "name": "xlock License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "Xnet",
+    "name": "X.Net License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "xpp",
+    "name": "XPP License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "XSkat",
+    "name": "XSkat License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "xzoom",
+    "name": "xzoom License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "YPL-1.0",
+    "name": "Yahoo! Public License v1.0",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "YPL-1.1",
+    "name": "Yahoo! Public License v1.1",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Zed",
+    "name": "Zed License",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Zeeff",
+    "name": "Zeeff License",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Zend-2.0",
+    "name": "Zend License v2.0",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "Zimbra-1.3",
+    "name": "Zimbra Public License v1.3",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Zimbra-1.4",
+    "name": "Zimbra Public License v1.4",
+    "category": "UNKNOWN"
+  },
+  {
+    "spdxId": "Zlib",
+    "name": "zlib License",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "zlib-acknowledgement",
+    "name": "zlib/libpng License with Acknowledgement",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ZPL-1.1",
+    "name": "Zope Public License 1.1",
+    "category": "PERMISSIVE_AMATEUR"
+  },
+  {
+    "spdxId": "ZPL-2.0",
+    "name": "Zope Public License 2.0",
+    "category": "PERMISSIVE_STANDARD"
+  },
+  {
+    "spdxId": "ZPL-2.1",
+    "name": "Zope Public License 2.1",
+    "category": "PERMISSIVE_STANDARD"
+  }
+]
