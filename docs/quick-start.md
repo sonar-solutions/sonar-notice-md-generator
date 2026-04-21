@@ -47,6 +47,42 @@ node build.js                  # build/sq-notice (host platform only)
 
 For cross-platform builds (macOS/Linux/Windows × x64/arm64) see [build.md](build.md).
 
+## End-to-end example
+<!-- updated: 2026-04-21_21:30:00 -->
+
+You have:
+- SonarQube at `https://sonar.mycompany.com`
+- A token `squ_abc123xyz…`
+- A project with key `backend-api`
+
+```sh
+# --- one-time setup ---
+mkdir -p ~/.sq-notice
+cat > ~/.sq-notice/credentials.json <<'EOF'
+{
+  "url": "https://sonar.mycompany.com",
+  "token": "squ_abc123xyz..."
+}
+EOF
+chmod 600 ~/.sq-notice/credentials.json
+
+# --- confirm it's working ---
+sq-notice list
+
+# --- generate the NOTICE for a release ---
+sq-notice generate backend-api \
+  -o NOTICE.md \
+  --project-version v2.1.0 \
+  --phase PRODUCTION \
+  --distribution COMMERCIAL
+
+# --- in CI, check it hasn't drifted ---
+sq-notice verify NOTICE.md backend-api --strict
+
+# --- download the raw SBOM for your compliance team ---
+sq-notice sbom backend-api -o backend-api-sbom.json
+```
+
 ## Next steps
 <!-- updated: 2026-04-21_15:25:00 -->
 

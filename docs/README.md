@@ -15,10 +15,11 @@ CLI that generates a `NOTICE.md` for a project by translating its SonarQube SBOM
 
 ## Documentation index
 
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
 ### Getting started
 
+- [installation.md](installation.md) — platform-specific download, setup, token creation, and SHA256 verification.
 - [quick-start.md](quick-start.md) — prerequisites, credentials, first NOTICE in 30 seconds.
 - [commands.md](commands.md) — reference for every subcommand and global flag.
 
@@ -38,6 +39,7 @@ CLI that generates a `NOTICE.md` for a project by translating its SonarQube SBOM
 
 - [fixtures.md](fixtures.md) — the `sample-project/` scanner fixture.
 - [limitations.md](limitations.md) — known caveats (SonarQube SCA data quality, verify parser tightness, etc.).
+- [troubleshooting.md](troubleshooting.md) — common errors, diagnostics, and fixes.
 - [changelog.md](changelog.md) — per-version notes.
 
 ## Version

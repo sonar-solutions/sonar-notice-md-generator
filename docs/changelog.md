@@ -10,6 +10,8 @@
 - MIT `LICENSE` file at repo root. `package.json` now declares `"license": "MIT"` and `"author": "Joshua Quek"`.
 - Additional license texts added to the embedded corpus for broader component coverage.
 - License corpus documentation updated with coverage details and audit information.
+- `docs/troubleshooting.md` — dedicated troubleshooting and FAQ page extracted from the root README.
+- Root `README.md` rewritten as a short, beginner-friendly landing page (~100 lines). Detailed content now lives in `docs/`.
 
 ### Known Issues
 <!-- updated: 2026-04-21_21:30:00 -->
