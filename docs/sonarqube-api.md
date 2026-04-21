@@ -37,9 +37,9 @@ Not used at runtime. `scripts/fetch-licenses.js --refresh-index` creates a dispo
 Tokens look like `squ_…` and are issued under **Account → Security → Generate Tokens** in the SonarQube UI.
 
 ## Organization quirk
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
-SonarQube Enterprise requires `organization: "default-organization"` when creating license profiles. Other organization keys (`default`, `sonarqube`, an empty string) return `{"message":"Non default organization is not supported"}`. `scripts/fetch-licenses.js` hardcodes `default-organization` in its `--refresh-index` flow. The SBOM, project-listing, and license-profile-read endpoints do **not** require the header — only create/delete.
+SonarQube Enterprise requires `organization: "default-organization"` in the JSON body when **creating** license profiles (POST). Other organization keys (`default`, `sonarqube`, an empty string) return `{"message":"Non default organization is not supported"}`. `scripts/fetch-licenses.js` hardcodes `default-organization` in its `--refresh-index` POST. The GET (read) and DELETE calls, as well as the SBOM and project-listing endpoints, do **not** include the field.
 
 ## Normalization
 <!-- updated: 2026-04-21_15:25:00 -->

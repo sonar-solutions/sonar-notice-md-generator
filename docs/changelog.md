@@ -1,5 +1,20 @@
 # Changelog
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
+
+## Unreleased
+<!-- updated: 2026-04-21_21:30:00 -->
+
+### Added
+<!-- updated: 2026-04-21_21:30:00 -->
+
+- MIT `LICENSE` file at repo root. `package.json` now declares `"license": "MIT"` and `"author": "Joshua Quek"`.
+- Additional license texts added to the embedded corpus for broader component coverage.
+- License corpus documentation updated with coverage details and audit information.
+
+### Known Issues
+<!-- updated: 2026-04-21_21:30:00 -->
+
+- **Version mismatch**: `package.json` still declares `"version": "0.1.0"` while `src/cli.js` defines `VERSION = '0.2.0'`. The `package.json` version should be bumped to `0.2.0` to match.
 
 ## 0.2.0 — 2026-04-21
 <!-- updated: 2026-04-21_15:25:00 -->
@@ -7,7 +22,7 @@
 ### Added
 <!-- updated: 2026-04-21_15:25:00 -->
 
-- `verify` subcommand: cross-checks a NOTICE.md against a live SonarQube SBOM (or a SBOM JSON on disk via `--sbom`). Parses the `## Components` section with a lenient regex, normalizes the SBOM the same way `generate` does, and reports Missing / Extra / Mismatched packages. Exits 1 on any discrepancy. `--strict` is reserved for future hard-fail semantics.
+- `verify` subcommand: cross-checks a NOTICE.md against a live SonarQube SBOM (or a SBOM JSON on disk via `--sbom`). Parses the `## Components` section with a lenient regex, normalizes the SBOM the same way `generate` does, and reports Missing / Extra / Mismatched packages. Exits 1 on any discrepancy. `--strict` currently only changes the failure summary message; the flag is accepted today so CI pipelines can opt in before future tiers are added.
 
 ### Changed
 <!-- updated: 2026-04-21_15:25:00 -->

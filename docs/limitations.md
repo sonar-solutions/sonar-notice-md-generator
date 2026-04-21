@@ -28,14 +28,14 @@ Eight SPDX ids in SonarQube's catalog have no canonical text in the upstream SPD
 Only darwin builds have been smoke-tested end-to-end. `build-all.js` is written to handle macOS, Linux, and Windows targets (postject is format-aware), but the Linux and Windows branches have not been run yet. Cross-compiled darwin binaries built from a non-macOS host will not be codesigned and will be rejected by Gatekeeper.
 
 ## `verify` parser tightness
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
-The `verify` command parses the `## Components` section with a regex that expects the exact bullet format:
+The `verify` command parses the `## Components` section with a regex that expects the bullet format:
 
 ```
 - `name` `version` : license
 ```
 
-Hand-edits that break this pattern (dropping a backtick, collapsing the separator, reformatting to a markdown table, adding a leading blockquote `>`, indenting, etc.) will cause those rows to be silently dropped from the comparison set. They will then surface as false "Missing" entries against the SBOM.
+Backticks around name and version are optional (the regex treats them as lenient), so stripping backticks alone will not break parsing. However, hand-edits that alter the structural pattern (collapsing the ` : ` separator, reformatting to a markdown table, adding a leading blockquote `>`, indenting, wrapping lines, etc.) will cause those rows to be silently dropped from the comparison set. They will then surface as false "Missing" entries against the SBOM.
 
 To keep `verify` authoritative, re-generate NOTICE.md with `generate` after manual edits rather than editing in place. Or keep hand-edited content in a separate appendix file and concatenate.

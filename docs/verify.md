@@ -45,9 +45,9 @@ The NOTICE stores a **human-readable** license name (e.g. `MIT License`). The SB
 - `MIT License` vs `Apache License 2.0` is flagged as mismatched.
 
 ## `--strict`
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
-Right now `verify` always exits 1 on any discrepancy. `--strict` is reserved for future use (e.g. treating a warning tier differently from a failure tier). The flag is documented and accepted today so that CI pipelines can opt into strict semantics unconditionally without a migration later.
+`verify` always exits 1 on any discrepancy, regardless of whether `--strict` is passed. Today `--strict` only changes the failure summary message — `"NOTICE.md does not match the SBOM (strict mode)."` instead of `"NOTICE.md has discrepancies with the SBOM."`. The flag is documented and accepted today so that CI pipelines can opt into strict semantics unconditionally without a migration when future tiers (e.g. warning vs failure) are added.
 
 ## CI integration example
 <!-- updated: 2026-04-21_15:25:00 -->

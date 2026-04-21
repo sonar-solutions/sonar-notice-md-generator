@@ -1,5 +1,5 @@
 # Build
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
 Two build entry points:
 
@@ -8,7 +8,10 @@ Two build entry points:
 | `node build.js [--clean]` | `build/sq-notice` (host platform only) | Local dev, fastest |
 | `node build-all.js [--clean] [--no-cache]` | `build/sq-notice-{platform}-{arch}[.exe]` × 6 | Release / distribution |
 
-`--clean` wipes `build/` outputs but keeps `build/.node-cache/` so re-runs don't re-download the Node runtime. `--no-cache` also wipes the Node-runtime cache.
+`--clean` behaves differently between the two scripts:
+- **`build.js --clean`** wipes the entire `build/` directory (including `.node-cache/`).
+- **`build-all.js --clean`** wipes `build/` outputs but preserves `build/.node-cache/` so re-runs don't re-download Node runtimes.
+- **`build-all.js --no-cache`** additionally wipes the `.node-cache/` download cache.
 
 ## Native build (`build.js`)
 <!-- updated: 2026-04-21_15:25:00 -->

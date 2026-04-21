@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "description": "Generate NOTICE.md from a SonarQube SBOM. Pure Node (no runtime dependencies), packaged as a Single Executable Application.",
+  "license": "MIT",
+  "author": "Joshua Quek",
   "bin": {
     "sq-notice": "src/cli.js"
   },

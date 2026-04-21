@@ -1,5 +1,5 @@
 # License Corpus Management
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
 The SPDX license-text corpus (`src/licenses/`) is the generator's authoritative source for rendering the `Licenses` section of `NOTICE.md`. It is committed to the repo — not fetched at runtime — so that NOTICE generation is deterministic and works offline.
 

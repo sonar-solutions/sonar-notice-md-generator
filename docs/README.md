@@ -1,6 +1,6 @@
-# notice-md-generator Documentation
+# sq-notice Documentation
 
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
 CLI that generates a `NOTICE.md` for a project by translating its SonarQube SBOM into structured Markdown. Distributed as a self-contained Node Single Executable Application (SEA) binary with no runtime dependencies — the full SPDX license-text corpus is baked into the binary as a SEA asset.
 
@@ -45,3 +45,9 @@ CLI that generates a `NOTICE.md` for a project by translating its SonarQube SBOM
 <!-- updated: 2026-04-21_15:25:00 -->
 
 Current: **0.2.0** (see [changelog.md](changelog.md)).
+
+## License
+
+<!-- updated: 2026-04-21_16:00:00 -->
+
+Released under the [MIT License](../LICENSE). Copyright (c) 2026 Joshua Quek.

@@ -2,11 +2,11 @@
 <!-- updated: 2026-04-21_15:25:00 -->
 
 ## Prerequisites
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
 - SonarQube Enterprise (developer local or remote) with SCA enabled
 - A user token (`squ_...`) with Browse on the target project
-- For building: Node 20.10+ and `npx`
+- For running from source or building: Node 20.10+
 
 ## Configure credentials
 <!-- updated: 2026-04-21_15:25:00 -->

@@ -22,9 +22,9 @@ credentials.json  ->  src/cli.js  --(SonarQube /api/v2/sca/sbom-reports)-->  SPD
 ```
 
 ## Design principles
-<!-- updated: 2026-04-21_15:25:00 -->
+<!-- updated: 2026-04-21_21:30:00 -->
 
-- **Zero runtime dependencies.** `src/cli.js` only imports Node built-ins (`fs`, `os`, `path`, `http`, `https`, `url`, `node:sea`).
+- **Zero runtime dependencies.** `src/cli.js` only imports Node built-ins (`node:fs`, `node:os`, `node:path`, `node:http`, `node:https`, `node:url`, `node:sea`).
 - **Single file, by design.** Easier to reason about and easier to embed in SEA without a bundler.
 - **Licenses are first-class build inputs**, fetched once by `scripts/fetch-licenses.js` and committed under `src/licenses/texts/` so they're diffable.
 
