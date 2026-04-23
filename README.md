@@ -1,4 +1,8 @@
+⚠️ Disclaimer: This is a purely experimental project, not affiliated with SonarSource or SonarQube in any way. Use at your own risk. Please fork and modify for your own needs, but do not use this in production or share it without clearly stating that it's not an official SonarQube product. I am not responsible for any issues that arise from using this tool.
+
 # SonarQube NOTICE.MD Generator
+
+[![Quality gate](https://sonarcloud.io/api/project_badges/quality_gate?project=sonar-solutions_sonar-notice-md-generator)](https://sonarcloud.io/summary/new_code?id=sonar-solutions_sonar-notice-md-generator) [![SonarQube Cloud](https://sonarcloud.io/images/project_badges/sonarcloud-light.svg)](https://sonarcloud.io/summary/new_code?id=sonar-solutions_sonar-notice-md-generator)
 
 Generate a `NOTICE.md` file for your project — the document that credits every open-source library you use and includes their license text.
 
