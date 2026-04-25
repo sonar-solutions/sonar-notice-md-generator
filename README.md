@@ -1,4 +1,4 @@
-⚠️ Disclaimer: This is a purely experimental project, not affiliated with SonarSource or SonarQube in any way. Use at your own risk. Please fork and modify for your own needs, but do not use this in production or share it without clearly stating that it's not an official SonarQube product. I am not responsible for any issues that arise from using this tool.
+**⚠️ Disclaimer: This is a purely experimental project, not affiliated with SonarSource or SonarQube in any way. Use at your own risk. Please fork and modify for your own needs, but do not use this in production or share it without clearly stating that it's not an official SonarQube product. I am not responsible for any issues that arise from using this tool.**
 
 # SonarQube NOTICE.MD Generator
 
