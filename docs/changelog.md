@@ -14,13 +14,18 @@
 - Root `README.md` rewritten as a short, beginner-friendly landing page (~100 lines). Detailed content now lives in `docs/`.
 
 ### Fixed
-<!-- updated: 2026-04-23_12:00:00 -->
+<!-- updated: 2026-04-25_18:00:00 -->
 
 - Resolved all 67 SonarCloud static analysis issues across 4 files:
   - **2 vulnerabilities** (S2612): Tightened file permissions from `0o755` to `0o750` in `build.js` and `build-all.js`.
   - **5 critical code smells**: Reduced cognitive complexity in `renderNotice` (24→15), `parseArgs` (21→15), and `main` in `build-all.js` (17→15) by extracting helper functions. Fixed nested function depth (>4 levels) in `build-all.js` and `scripts/fetch-licenses.js`.
   - **9 major code smells**: Replaced logical-AND chains with optional chaining (`?.`), replaced regex `.test()` with `String#startsWith()`.
   - **51 minor code smells**: Replaced multiple `Array#push()` calls with array spread/init, flipped negated conditions, used `String#replaceAll()` over `String#replace()`.
+- Fixed remaining open SonarCloud issue: flipped negated condition (`n !== 0 ? n :` → `n === 0 ? ... : n`) in `src/cli.js` sort comparator.
+- Resolved all 5 SonarCloud security hotspots:
+  - **3 regex DoS (S5852)**: Replaced `text.replace(/\s+$/, '')` with `text.trimEnd()`. Removed trailing `\s*` from `bulletRe` and heading regexes (captured groups are already `.trim()`'d).
+  - **1 unpinned GitHub Action (S7637)**: Pinned all 5 GitHub Actions in `release.yml` to full commit SHAs.
+  - **1 PATH search (S4036)**: Resolved `npx` to absolute path via `path.dirname(process.execPath)` in `build-all.js`.
 
 ### Known Issues
 <!-- updated: 2026-04-21_21:30:00 -->

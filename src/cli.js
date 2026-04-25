@@ -403,7 +403,7 @@ function renderLicenseBlock(id, users) {
   const userList = users.map((u) => `${u.name} ${u.version}`).join(', ');
   const text = licenseText(id);
   const textLines = text
-    ? ['```', text.replace(/\s+$/, ''), '```']
+    ? ['```', text.trimEnd(), '```']
     : [`> No canonical license text available for SPDX id \`${id}\`.`, `> See <https://spdx.org/licenses/${id}.html>.`];
   return [
     `# **${licenseHumanName(id)}**`,
@@ -441,7 +441,7 @@ function renderLicenses(sortedRecords) {
 function renderNotice({ projectKey, projectName, version, records, phase, distribution, copyrightYear }) {
   const sortedRecords = [...records].sort((a, b) => {
     const n = a.name.localeCompare(b.name);
-    return n !== 0 ? n : a.version.localeCompare(b.version);
+    return n === 0 ? a.version.localeCompare(b.version) : n;
   });
 
   const lines = [
@@ -469,11 +469,11 @@ function parseNotice(markdown) {
   // Accept either a curly em-dash or an ASCII colon between version and license.
   // Matches:  - `name` `version` : License Name
   //           -  name version : License Name    (backticks optional for leniency)
-  const bulletRe = /^-\s+`?([^`]+?)`?\s+`?([^\s`]+)`?\s+:\s+(.+?)\s*$/;
+  const bulletRe = /^-\s+`?([^`]+?)`?\s+`?([^\s`]+)`?\s+:\s+(.+)$/;
 
   for (const raw of lines) {
     const line = raw.replace(/\r$/, '');
-    const heading = line.match(/^(#{1,6})\s+(.+?)\s*$/);
+    const heading = line.match(/^(#{1,6})\s+(.+)$/);
     if (heading) {
       const title = heading[2].toLowerCase().replaceAll(/\*+/g, '').trim();
       if (title === 'components' || title.startsWith('components')) {

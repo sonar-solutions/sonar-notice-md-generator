@@ -23,6 +23,7 @@ const ROOT = __dirname;
 const BUILD_DIR = path.join(ROOT, 'build');
 const CACHE_DIR = path.join(BUILD_DIR, '.node-cache');
 const NPX_CACHE = path.join(BUILD_DIR, '.npm-cache');
+const NPX_PATH = path.join(path.dirname(process.execPath), 'npx');
 const BIN_NAME = 'sq-notice';
 const SENTINEL_FUSE = 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2';
 const NODE_VERSION = process.version; // e.g. 'v20.20.1'
@@ -137,7 +138,7 @@ function warmPostject() {
   fs.mkdirSync(NPX_CACHE, { recursive: true });
   process.stderr.write('[npx] warming postject cache\n');
   // Touch: --help to pre-install without doing anything
-  const r = spawnSync('npx', ['-y', 'postject', '--help'], {
+  const r = spawnSync(NPX_PATH, ['-y', 'postject', '--help'], {
     cwd: ROOT,
     env: { ...process.env, NPM_CONFIG_CACHE: NPX_CACHE },
     stdio: ['ignore', 'ignore', 'inherit'],
@@ -169,7 +170,7 @@ function injectAndSign(target, nodeBin) {
 
   const postjectArgs = ['-y', 'postject', outPath, 'NODE_SEA_BLOB', CROSS_BLOB, '--sentinel-fuse', SENTINEL_FUSE];
   if (isMac) postjectArgs.push('--macho-segment-name', 'NODE_SEA');
-  runSync('npx', postjectArgs, { env: { NPM_CONFIG_CACHE: NPX_CACHE } });
+  runSync(NPX_PATH, postjectArgs, { env: { NPM_CONFIG_CACHE: NPX_CACHE } });
 
   if (isMac && hostIsMac) {
     runSync('codesign', ['--sign', '-', outPath]);
