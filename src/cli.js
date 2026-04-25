@@ -43,7 +43,7 @@ function readSeaAsset(name) {
   try {
     // eslint-disable-next-line global-require
     const sea = require('node:sea');
-    if (!sea.isSea || !sea.isSea()) return null;
+    if (!sea.isSea?.()) return null;
     try {
       return sea.getAsset(name, 'utf8');
     } catch {
@@ -171,7 +171,7 @@ async function getJson(baseUrl, token, pathAndQuery, { accept = 'application/jso
     let msg = text;
     try {
       const j = JSON.parse(text);
-      msg = j.message || (j.errors && j.errors.map((e) => e.msg).join('; ')) || text;
+      msg = j.message || j.errors?.map((e) => e.msg).join('; ') || text;
     } catch { /* keep raw */ }
     throw new Error(`HTTP ${res.statusCode} ${pathAndQuery}: ${msg}`);
   }
@@ -231,7 +231,7 @@ function extractSpdxIds(expr) {
   if (!expr) return [];
   const s = String(expr).trim();
   if (!s || s === 'NOASSERTION' || s === 'NONE') return [];
-  const tokens = s.replace(/[()]/g, ' ').split(/\s+/).filter(Boolean);
+  const tokens = s.replaceAll(/[()]/g, ' ').split(/\s+/).filter(Boolean);
   const out = [];
   const seen = new Set();
   for (const t of tokens) {
@@ -251,7 +251,7 @@ function humanizeLicenseExpression(expr) {
   // "(Apache-2.0 OR MIT)" -> "(Apache License 2.0 OR MIT License)"
   if (!expr) return '';
   if (expr === 'NOASSERTION' || expr === 'NONE') return expr;
-  return expr.replace(/[A-Za-z0-9.\-+]+/g, (tok) => {
+  return expr.replaceAll(/[A-Za-z0-9.\-+]+/g, (tok) => {
     if (SPDX_OPERATORS.has(tok.toUpperCase())) return tok.toUpperCase();
     if (tok === 'NOASSERTION' || tok === 'NONE') return tok;
     const id = tok.endsWith('+') ? tok.slice(0, -1) + '-or-later' : tok;
@@ -307,9 +307,9 @@ function normalizeCycloneDx(sbom) {
 }
 
 function normalizeSbom(sbom) {
-  if (sbom && sbom.spdxVersion) return { records: normalizeSpdx23(sbom), projectName: sbom.name };
-  if (sbom && (sbom.bomFormat === 'CycloneDX' || sbom.specVersion)) {
-    const projectName = sbom.metadata && sbom.metadata.component && sbom.metadata.component.name;
+  if (sbom?.spdxVersion) return { records: normalizeSpdx23(sbom), projectName: sbom.name };
+  if (sbom?.bomFormat === 'CycloneDX' || sbom?.specVersion) {
+    const projectName = sbom.metadata?.component?.name;
     return { records: normalizeCycloneDx(sbom), projectName };
   }
   throw new Error('Unrecognized SBOM format (expected SPDX 2.3 JSON or CycloneDX JSON)');
@@ -342,96 +342,114 @@ function normalizeSbom(sbom) {
 // requested by the user for maximum visual separation between licenses when
 // scrolling through the file.
 
-function renderNotice({ projectKey, projectName, version, records, phase, distribution, copyrightYear }) {
-  const sortedRecords = [...records].sort((a, b) => {
-    const n = a.name.localeCompare(b.name);
-    return n !== 0 ? n : a.version.localeCompare(b.version);
-  });
-
-  const lines = [];
+function renderHeader({ projectKey, projectName, version, phase, distribution, copyrightYear }) {
   const title = projectName || projectKey;
-  lines.push(`# NOTICE — ${title}`);
-  lines.push('');
-  lines.push(`**Copyright:** ${copyrightYear}  `);
+  const lines = [
+    `# NOTICE — ${title}`,
+    '',
+    `**Copyright:** ${copyrightYear}  `,
+  ];
   if (version) lines.push(`**Version:** ${version}  `);
-  lines.push(`**Phase:** ${phase}  `);
-  lines.push(`**Distribution:** ${distribution}`);
-  lines.push('');
-  lines.push('---');
-  lines.push('');
+  lines.push(`**Phase:** ${phase}  `, `**Distribution:** ${distribution}`, '', '---', '');
+  return lines;
+}
 
-  // Components section -------------------------------------------------------
-  lines.push('## Components');
-  lines.push('');
-  lines.push(`${sortedRecords.length} third-party component${sortedRecords.length === 1 ? '' : 's'}.`);
-  lines.push('');
-  for (const r of sortedRecords) {
-    lines.push(`- \`${r.name}\` \`${r.version}\` : ${humanizeLicenseExpression(r.licenseExpression)}`);
-  }
-  lines.push('');
-  lines.push('---');
-  lines.push('');
+function renderComponents(sortedRecords) {
+  const lines = [
+    '## Components',
+    '',
+    `${sortedRecords.length} third-party component${sortedRecords.length === 1 ? '' : 's'}.`,
+    '',
+    ...sortedRecords.map((r) => `- \`${r.name}\` \`${r.version}\` : ${humanizeLicenseExpression(r.licenseExpression)}`),
+    '',
+    '---',
+    '',
+  ];
+  return lines;
+}
 
-  // Copyright Text section --------------------------------------------------
+function renderCopyrightText(sortedRecords) {
   const withCopyright = sortedRecords.filter((r) => r.copyrightText);
-  if (withCopyright.length) {
-    lines.push('## Copyright Text');
-    lines.push('');
-    for (const r of withCopyright) {
-      lines.push(`### \`${r.name}\` \`${r.version}\``);
-      lines.push('');
-      lines.push(`_${r.purl}_`);
-      lines.push('');
-      lines.push('```');
-      for (const c of r.copyrightText.split(/\r?\n/)) lines.push(c);
-      lines.push('```');
-      lines.push('');
-    }
-    lines.push('---');
-    lines.push('');
+  if (withCopyright.length === 0) return [];
+  const lines = ['## Copyright Text', ''];
+  for (const r of withCopyright) {
+    lines.push(
+      `### \`${r.name}\` \`${r.version}\``,
+      '',
+      `_${r.purl}_`,
+      '',
+      '```',
+      ...r.copyrightText.split(/\r?\n/),
+      '```',
+      '',
+    );
   }
+  lines.push('---', '');
+  return lines;
+}
 
-  // Licenses section --------------------------------------------------------
-  const licenseUsers = new Map(); // spdxId -> [{name,version}]
+function buildLicenseMap(sortedRecords) {
+  const licenseUsers = new Map();
   for (const r of sortedRecords) {
     for (const id of extractSpdxIds(r.licenseExpression)) {
       if (!licenseUsers.has(id)) licenseUsers.set(id, []);
       licenseUsers.get(id).push({ name: r.name, version: r.version });
     }
   }
-  if (licenseUsers.size) {
-    lines.push('## Licenses');
-    lines.push('');
-    lines.push(`${licenseUsers.size} distinct license${licenseUsers.size === 1 ? '' : 's'} in use.`);
-    lines.push('');
-    lines.push('---');
-    lines.push('');
+  return licenseUsers;
+}
 
-    const sortedIds = [...licenseUsers.keys()].sort((a, b) =>
-      licenseHumanName(a).localeCompare(licenseHumanName(b))
-    );
-    for (const id of sortedIds) {
-      const users = licenseUsers.get(id);
-      const userList = users.map((u) => `${u.name} ${u.version}`).join(', ');
-      lines.push(`# **${licenseHumanName(id)}**`);
-      lines.push(`<!-- SPDX-License-Identifier: ${id} -->`);
-      lines.push('');
-      lines.push(`**Used by (${users.length}):** ${userList}`);
-      lines.push('');
-      const text = licenseText(id);
-      if (text) {
-        lines.push('```');
-        lines.push(text.replace(/\s+$/, ''));
-        lines.push('```');
-      } else {
-        lines.push(`> No canonical license text available for SPDX id \`${id}\`.`);
-        lines.push(`> See <https://spdx.org/licenses/${id}.html>.`);
-      }
-      lines.push('');
-      lines.push('---');
-      lines.push('');
-    }
+function renderLicenseBlock(id, users) {
+  const userList = users.map((u) => `${u.name} ${u.version}`).join(', ');
+  const text = licenseText(id);
+  const textLines = text
+    ? ['```', text.replace(/\s+$/, ''), '```']
+    : [`> No canonical license text available for SPDX id \`${id}\`.`, `> See <https://spdx.org/licenses/${id}.html>.`];
+  return [
+    `# **${licenseHumanName(id)}**`,
+    `<!-- SPDX-License-Identifier: ${id} -->`,
+    '',
+    `**Used by (${users.length}):** ${userList}`,
+    '',
+    ...textLines,
+    '',
+    '---',
+    '',
+  ];
+}
+
+function renderLicenses(sortedRecords) {
+  const licenseUsers = buildLicenseMap(sortedRecords);
+  if (!licenseUsers.size) return [];
+  const lines = [
+    '## Licenses',
+    '',
+    `${licenseUsers.size} distinct license${licenseUsers.size === 1 ? '' : 's'} in use.`,
+    '',
+    '---',
+    '',
+  ];
+  const sortedIds = [...licenseUsers.keys()].sort((a, b) =>
+    licenseHumanName(a).localeCompare(licenseHumanName(b))
+  );
+  for (const id of sortedIds) {
+    lines.push(...renderLicenseBlock(id, licenseUsers.get(id)));
   }
+  return lines;
+}
+
+function renderNotice({ projectKey, projectName, version, records, phase, distribution, copyrightYear }) {
+  const sortedRecords = [...records].sort((a, b) => {
+    const n = a.name.localeCompare(b.name);
+    return n !== 0 ? n : a.version.localeCompare(b.version);
+  });
+
+  const lines = [
+    ...renderHeader({ projectKey, projectName, version, phase, distribution, copyrightYear }),
+    ...renderComponents(sortedRecords),
+    ...renderCopyrightText(sortedRecords),
+    ...renderLicenses(sortedRecords),
+  ];
 
   return lines.join('\n');
 }
@@ -457,7 +475,7 @@ function parseNotice(markdown) {
     const line = raw.replace(/\r$/, '');
     const heading = line.match(/^(#{1,6})\s+(.+?)\s*$/);
     if (heading) {
-      const title = heading[2].toLowerCase().replace(/\*+/g, '').trim();
+      const title = heading[2].toLowerCase().replaceAll(/\*+/g, '').trim();
       if (title === 'components' || title.startsWith('components')) {
         inComponents = true;
         continue;
@@ -509,44 +527,42 @@ function verifyNoticeAgainstSbom(notice, records) {
 }
 
 function formatVerifyReport(res, { projectKey, strict }) {
-  const out = [];
-  out.push(`Verifying NOTICE.md against ${projectKey}`);
-  out.push(`  SBOM packages:   ${res.sbomCount}`);
-  out.push(`  NOTICE packages: ${res.noticeCount}`);
-  out.push('');
-
   const check = (label, ok) => `  ${ok ? '[OK]  ' : '[FAIL]'} ${label}`;
 
-  out.push(check(`packages listed in NOTICE are all in SBOM (${res.noticeCount - res.extra.length}/${res.noticeCount})`, res.extra.length === 0));
-  out.push(check(`packages in SBOM are all listed in NOTICE (${res.sbomCount - res.missing.length}/${res.sbomCount})`, res.missing.length === 0));
-  out.push(check(`license names match for every package (${res.sbomCount - res.mismatched.length}/${res.sbomCount})`, res.mismatched.length === 0));
-  out.push('');
+  const out = [
+    `Verifying NOTICE.md against ${projectKey}`,
+    `  SBOM packages:   ${res.sbomCount}`,
+    `  NOTICE packages: ${res.noticeCount}`,
+    '',
+    check(`packages listed in NOTICE are all in SBOM (${res.noticeCount - res.extra.length}/${res.noticeCount})`, res.extra.length === 0),
+    check(`packages in SBOM are all listed in NOTICE (${res.sbomCount - res.missing.length}/${res.sbomCount})`, res.missing.length === 0),
+    check(`license names match for every package (${res.sbomCount - res.mismatched.length}/${res.sbomCount})`, res.mismatched.length === 0),
+    '',
+  ];
 
   if (res.missing.length) {
-    out.push(`Missing from NOTICE (${res.missing.length}):`);
-    for (const r of res.missing) {
-      out.push(`  - ${r.name} ${r.version}  (${humanizeLicenseExpression(r.licenseExpression)})`);
-    }
-    out.push('');
+    out.push(
+      `Missing from NOTICE (${res.missing.length}):`,
+      ...res.missing.map((r) => `  - ${r.name} ${r.version}  (${humanizeLicenseExpression(r.licenseExpression)})`),
+      '',
+    );
   }
   if (res.extra.length) {
-    out.push(`Extra in NOTICE, not in SBOM (${res.extra.length}):`);
-    for (const c of res.extra) {
-      out.push(`  - ${c.name} ${c.version}  (${c.licenseName})`);
-    }
-    out.push('');
+    out.push(
+      `Extra in NOTICE, not in SBOM (${res.extra.length}):`,
+      ...res.extra.map((c) => `  - ${c.name} ${c.version}  (${c.licenseName})`),
+      '',
+    );
   }
   if (res.mismatched.length) {
-    out.push(`License mismatches (${res.mismatched.length}):`);
-    for (const m of res.mismatched) {
-      out.push(`  - ${m.key}`);
-      out.push(`      NOTICE: ${m.notice}`);
-      out.push(`      SBOM:   ${m.sbom}`);
-    }
-    out.push('');
+    out.push(
+      `License mismatches (${res.mismatched.length}):`,
+      ...res.mismatched.flatMap((m) => [`  - ${m.key}`, `      NOTICE: ${m.notice}`, `      SBOM:   ${m.sbom}`]),
+      '',
+    );
   }
 
-  const clean = !res.missing.length && !res.extra.length && !res.mismatched.length;
+  const clean = res.missing.length === 0 && res.extra.length === 0 && res.mismatched.length === 0;
   if (clean) {
     out.push('NOTICE.md is consistent with the SBOM.');
   } else {
@@ -561,6 +577,38 @@ function formatVerifyReport(res, { projectKey, strict }) {
 // CLI argument parsing
 // ---------------------------------------------------------------------------
 
+function isFlag(value) {
+  return value === undefined || value.startsWith('-');
+}
+
+function parseLongFlag(argv, i, args) {
+  const a = argv[i];
+  const eq = a.indexOf('=');
+  if (eq !== -1) {
+    args.flags[a.slice(2, eq)] = a.slice(eq + 1);
+    return i + 1;
+  }
+  const key = a.slice(2);
+  const next = argv[i + 1];
+  if (isFlag(next)) {
+    args.flags[key] = true;
+    return i + 1;
+  }
+  args.flags[key] = next;
+  return i + 2;
+}
+
+function parseShortFlag(argv, i, args) {
+  const key = argv[i].slice(1);
+  const next = argv[i + 1];
+  if (isFlag(next)) {
+    args.flags[key] = true;
+    return i + 1;
+  }
+  args.flags[key] = next;
+  return i + 2;
+}
+
 function parseArgs(argv) {
   const args = { _: [], flags: {} };
   let i = 0;
@@ -571,31 +619,9 @@ function parseArgs(argv) {
       break;
     }
     if (a.startsWith('--')) {
-      const eq = a.indexOf('=');
-      if (eq !== -1) {
-        args.flags[a.slice(2, eq)] = a.slice(eq + 1);
-        i += 1;
-      } else {
-        const key = a.slice(2);
-        const next = argv[i + 1];
-        if (next === undefined || next.startsWith('-')) {
-          args.flags[key] = true;
-          i += 1;
-        } else {
-          args.flags[key] = next;
-          i += 2;
-        }
-      }
+      i = parseLongFlag(argv, i, args);
     } else if (a.startsWith('-') && a.length > 1) {
-      const key = a.slice(1);
-      const next = argv[i + 1];
-      if (next === undefined || next.startsWith('-')) {
-        args.flags[key] = true;
-        i += 1;
-      } else {
-        args.flags[key] = next;
-        i += 2;
-      }
+      i = parseShortFlag(argv, i, args);
     } else {
       args._.push(a);
       i += 1;
@@ -761,6 +787,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  process.stderr.write(`Error: ${err && err.message ? err.message : err}\n`);
+  process.stderr.write(`Error: ${err?.message ?? err}\n`);
   process.exit(1);
 });

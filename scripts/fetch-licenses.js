@@ -77,7 +77,7 @@ async function fetchOne(entry, { force }) {
       lastErr = err;
     }
   }
-  return { id: entry.spdxId, status: 'missing', error: lastErr && lastErr.message };
+  return { id: entry.spdxId, status: 'missing', error: lastErr?.message };
 }
 
 async function runPool(items, worker, concurrency) {
@@ -94,34 +94,34 @@ async function runPool(items, worker, concurrency) {
   return results;
 }
 
-async function refreshIndex(url, token) {
-  // Create a temp license profile, read its policy to get the full SPDX list,
-  // then delete the profile.
-  const api = async (method, p, body) => {
-    const u = new URL(url + p);
-    const opts = {
-      method,
-      headers: { authorization: 'Bearer ' + token, 'content-type': 'application/json' },
-    };
-    return new Promise((resolve, reject) => {
-      const h = u.protocol === 'https:' ? require('node:https') : require('node:http');
-      const req = h.request(u, opts, (res) => {
-        const chunks = [];
-        res.on('data', (c) => chunks.push(c));
-        res.on('end', () => {
-          const text = Buffer.concat(chunks).toString('utf8');
-          if (res.statusCode >= 200 && res.statusCode < 300) {
-            resolve(text ? JSON.parse(text) : null);
-          } else {
-            reject(new Error(`HTTP ${res.statusCode} ${method} ${p}: ${text}`));
-          }
-        });
-      });
-      req.on('error', reject);
-      if (body) req.write(JSON.stringify(body));
-      req.end();
-    });
+function apiRequest(baseUrl, token, method, p, body) {
+  const u = new URL(baseUrl + p);
+  const opts = {
+    method,
+    headers: { authorization: 'Bearer ' + token, 'content-type': 'application/json' },
   };
+  return new Promise((resolve, reject) => {
+    const h = u.protocol === 'https:' ? require('node:https') : require('node:http');
+    const req = h.request(u, opts, (res) => {
+      const chunks = [];
+      res.on('data', (c) => chunks.push(c));
+      res.on('end', () => {
+        const text = Buffer.concat(chunks).toString('utf8');
+        if (res.statusCode >= 200 && res.statusCode < 300) {
+          resolve(text ? JSON.parse(text) : null);
+        } else {
+          reject(new Error(`HTTP ${res.statusCode} ${method} ${p}: ${text}`));
+        }
+      });
+    });
+    req.on('error', reject);
+    if (body) req.write(JSON.stringify(body));
+    req.end();
+  });
+}
+
+async function refreshIndex(url, token) {
+  const api = (method, p, body) => apiRequest(url, token, method, p, body);
   console.error('[refresh] creating temp license profile...');
   const created = await api('POST', '/api/v2/sca/license-profiles', {
     name: '__notice_md_probe__',
@@ -178,8 +178,8 @@ async function main() {
     CONCURRENCY
   );
 
-  const ok = results.filter((r) => r.status === 'ok' || r.status === 'cached' || /^ok \(/.test(r.status));
-  const aliased = results.filter((r) => /^ok \(aliased/.test(r.status));
+  const ok = results.filter((r) => r.status === 'ok' || r.status === 'cached' || r.status.startsWith('ok ('));
+  const aliased = results.filter((r) => r.status.startsWith('ok (aliased'));
   const missing = results.filter((r) => r.status === 'missing');
   const elapsed = ((Date.now() - started) / 1000).toFixed(1);
 
@@ -196,7 +196,7 @@ async function main() {
     totalRequested: entries.length,
     present: ok.length,
     missing: missing.map((m) => m.id),
-    aliased: aliased.map((a) => ({ spdxId: a.id, via: a.status.replace(/^ok \(aliased to |\)$/g, '') })),
+    aliased: aliased.map((a) => ({ spdxId: a.id, via: a.status.replaceAll(/^ok \(aliased to |\)$/g, '') })),
   };
   fs.writeFileSync(MANIFEST_PATH, JSON.stringify(manifest, null, 2), 'utf8');
   console.error(`[fetch] manifest -> ${MANIFEST_PATH}`);

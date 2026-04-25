@@ -40,7 +40,7 @@ const TARGETS = [
 
 function runSync(cmd, args, opts = {}) {
   process.stderr.write(`$ ${cmd} ${args.join(' ')}\n`);
-  const env = { ...process.env, ...(opts.env || {}) };
+  const env = { ...process.env, ...opts.env };
   const r = spawnSync(cmd, args, { stdio: 'inherit', cwd: ROOT, ...opts, env });
   if (r.status !== 0) {
     throw new Error(`Command failed (exit ${r.status}): ${cmd} ${args.join(' ')}`);
@@ -48,7 +48,7 @@ function runSync(cmd, args, opts = {}) {
 }
 
 function runCapture(cmd, args, opts = {}) {
-  const env = { ...process.env, ...(opts.env || {}) };
+  const env = { ...process.env, ...opts.env };
   const r = spawnSync(cmd, args, { cwd: ROOT, ...opts, env });
   if (r.status !== 0) {
     throw new Error(`Command failed (exit ${r.status}): ${cmd} ${args.join(' ')}\n${r.stderr?.toString() || ''}`);
@@ -56,33 +56,40 @@ function runCapture(cmd, args, opts = {}) {
   return r.stdout?.toString() || '';
 }
 
-function download(url, dest) {
+function followRedirects(url, depth = 0) {
   return new Promise((resolve, reject) => {
-    const tmp = dest + '.part';
-    const file = fs.createWriteStream(tmp);
-    const doReq = (u, depth = 0) => {
-      if (depth > 5) return reject(new Error(`Too many redirects: ${u}`));
-      https.get(u, (res) => {
-        if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-          res.resume();
-          return doReq(new URL(res.headers.location, u).toString(), depth + 1);
-        }
-        if (res.statusCode !== 200) {
-          res.resume();
-          return reject(new Error(`Download failed: ${u} -> HTTP ${res.statusCode}`));
-        }
-        res.pipe(file);
-        file.on('finish', () => file.close(() => {
-          fs.renameSync(tmp, dest);
-          resolve();
-        }));
-      }).on('error', (err) => {
-        try { file.close(); fs.unlinkSync(tmp); } catch {}
-        reject(err);
-      });
-    };
-    doReq(url);
+    if (depth > 5) return reject(new Error(`Too many redirects: ${url}`));
+    https.get(url, (res) => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        res.resume();
+        return followRedirects(new URL(res.headers.location, url).toString(), depth + 1).then(resolve, reject);
+      }
+      resolve(res);
+    }).on('error', reject);
   });
+}
+
+async function download(url, dest) {
+  const tmp = dest + '.part';
+  const file = fs.createWriteStream(tmp);
+  try {
+    const res = await followRedirects(url);
+    if (res.statusCode !== 200) {
+      res.resume();
+      throw new Error(`Download failed: ${url} -> HTTP ${res.statusCode}`);
+    }
+    await new Promise((resolve, reject) => {
+      res.pipe(file);
+      file.on('finish', () => file.close(() => {
+        fs.renameSync(tmp, dest);
+        resolve();
+      }));
+      res.on('error', reject);
+    });
+  } catch (err) {
+    try { file.close(); fs.unlinkSync(tmp); } catch {}
+    throw err;
+  }
 }
 
 async function fetchAndExtract(target) {
@@ -91,12 +98,12 @@ async function fetchAndExtract(target) {
   const archivePath = path.join(CACHE_DIR, archive);
   const extractedDir = path.join(CACHE_DIR, base);
 
-  if (!fs.existsSync(archivePath)) {
+  if (fs.existsSync(archivePath)) {
+    process.stderr.write(`[cache] ${archive}\n`);
+  } else {
     const url = `https://nodejs.org/dist/${NODE_VERSION}/${archive}`;
     process.stderr.write(`[fetch] ${url}\n`);
     await download(url, archivePath);
-  } else {
-    process.stderr.write(`[cache] ${archive}\n`);
   }
 
   if (!fs.existsSync(extractedDir)) {
@@ -147,7 +154,7 @@ function injectAndSign(target, nodeBin) {
   const outPath = path.join(BUILD_DIR, outName);
 
   fs.copyFileSync(nodeBin, outPath);
-  fs.chmodSync(outPath, 0o755);
+  fs.chmodSync(outPath, 0o750);
 
   const isMac = target.platform === 'darwin';
   const hostIsMac = process.platform === 'darwin';
@@ -172,10 +179,8 @@ function injectAndSign(target, nodeBin) {
   return { outPath, bytes: stat.size };
 }
 
-async function main() {
-  const argv = new Set(process.argv.slice(2));
+function cleanBuildDir(argv) {
   if (argv.has('--clean')) {
-    // Keep the node cache; just wipe build outputs
     for (const entry of fs.readdirSync(BUILD_DIR, { withFileTypes: true })) {
       if (entry.name === '.node-cache') continue;
       fs.rmSync(path.join(BUILD_DIR, entry.name), { recursive: true, force: true });
@@ -186,29 +191,9 @@ async function main() {
   }
   fs.mkdirSync(BUILD_DIR, { recursive: true });
   fs.mkdirSync(CACHE_DIR, { recursive: true });
+}
 
-  // 1. Cross-compat SEA blob (once, arch-independent)
-  process.stderr.write('\n=== Building cross-compat SEA blob ===\n');
-  buildSeaBlob();
-
-  // 2. Warm postject cache so parallel invocations don't race
-  warmPostject();
-
-  // 3. Fetch + extract Node runtimes in parallel
-  process.stderr.write('\n=== Fetching Node runtimes (parallel) ===\n');
-  const fetched = await Promise.all(
-    TARGETS.map(async (t) => {
-      try {
-        const bin = await fetchAndExtract(t);
-        return { target: t, bin, ok: true };
-      } catch (err) {
-        return { target: t, ok: false, err: err.message };
-      }
-    })
-  );
-
-  // 4. Inject + sign (sequential — fast, and keeps codesign/postject output readable)
-  process.stderr.write('\n=== Injecting SEA blob into each runtime ===\n');
+function injectAll(fetched) {
   const results = [];
   for (const f of fetched) {
     const t = f.target;
@@ -226,8 +211,10 @@ async function main() {
       results.push({ target: t, ok: false, err: err.message });
     }
   }
+  return results;
+}
 
-  // 5. Summary
+function printSummary(results) {
   process.stderr.write('\n=== Build Summary ===\n');
   let anyFail = false;
   for (const r of results) {
@@ -241,6 +228,30 @@ async function main() {
     }
   }
   if (anyFail) process.exit(1);
+}
+
+async function main() {
+  cleanBuildDir(new Set(process.argv.slice(2)));
+
+  process.stderr.write('\n=== Building cross-compat SEA blob ===\n');
+  buildSeaBlob();
+  warmPostject();
+
+  process.stderr.write('\n=== Fetching Node runtimes (parallel) ===\n');
+  const fetched = await Promise.all(
+    TARGETS.map(async (t) => {
+      try {
+        const bin = await fetchAndExtract(t);
+        return { target: t, bin, ok: true };
+      } catch (err) {
+        return { target: t, ok: false, err: err.message };
+      }
+    })
+  );
+
+  process.stderr.write('\n=== Injecting SEA blob into each runtime ===\n');
+  const results = injectAll(fetched);
+  printSummary(results);
 }
 
 main().catch((err) => {

@@ -47,3 +47,4 @@ service-account*.json
 .aws/config
 .ssh/
 NOTICE.md
+fixtures/

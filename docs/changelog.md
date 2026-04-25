@@ -13,6 +13,15 @@
 - `docs/troubleshooting.md` — dedicated troubleshooting and FAQ page extracted from the root README.
 - Root `README.md` rewritten as a short, beginner-friendly landing page (~100 lines). Detailed content now lives in `docs/`.
 
+### Fixed
+<!-- updated: 2026-04-23_12:00:00 -->
+
+- Resolved all 67 SonarCloud static analysis issues across 4 files:
+  - **2 vulnerabilities** (S2612): Tightened file permissions from `0o755` to `0o750` in `build.js` and `build-all.js`.
+  - **5 critical code smells**: Reduced cognitive complexity in `renderNotice` (24→15), `parseArgs` (21→15), and `main` in `build-all.js` (17→15) by extracting helper functions. Fixed nested function depth (>4 levels) in `build-all.js` and `scripts/fetch-licenses.js`.
+  - **9 major code smells**: Replaced logical-AND chains with optional chaining (`?.`), replaced regex `.test()` with `String#startsWith()`.
+  - **51 minor code smells**: Replaced multiple `Array#push()` calls with array spread/init, flipped negated conditions, used `String#replaceAll()` over `String#replace()`.
+
 ### Known Issues
 <!-- updated: 2026-04-21_21:30:00 -->
 

@@ -26,7 +26,7 @@ const SENTINEL_FUSE = 'NODE_SEA_FUSE_fce680ab2cc467b6e072b8b5df1996b2';
 
 function run(cmd, args, opts = {}) {
   process.stderr.write(`$ ${cmd} ${args.join(' ')}\n`);
-  const env = { ...process.env, ...(opts.env || {}) };
+  const env = { ...process.env, ...opts.env };
   const r = spawnSync(cmd, args, { stdio: 'inherit', cwd: ROOT, ...opts, env });
   if (r.status !== 0) {
     process.stderr.write(`Command failed (exit ${r.status}): ${cmd} ${args.join(' ')}\n`);
@@ -51,7 +51,7 @@ function main() {
 
   // 3. Copy node binary
   fs.copyFileSync(process.execPath, BIN_PATH);
-  fs.chmodSync(BIN_PATH, 0o755);
+  fs.chmodSync(BIN_PATH, 0o750);
 
   // 4. macOS: remove existing signature so postject can modify the binary
   const isMac = process.platform === 'darwin';
