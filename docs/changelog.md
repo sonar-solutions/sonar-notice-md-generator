@@ -23,7 +23,7 @@
   - **51 minor code smells**: Replaced multiple `Array#push()` calls with array spread/init, flipped negated conditions, used `String#replaceAll()` over `String#replace()`.
 - Fixed remaining open SonarCloud issue: flipped negated condition (`n !== 0 ? n :` → `n === 0 ? ... : n`) in `src/cli.js` sort comparator.
 - Resolved all 5 SonarCloud security hotspots:
-  - **3 regex DoS (S5852)**: Replaced `text.replace(/\s+$/, '')` with `text.trimEnd()`. Removed trailing `\s*` from `bulletRe` and heading regexes (captured groups are already `.trim()`'d).
+  - **3 regex DoS (S5852)**: Replaced `text.replace(/\s+$/, '')` with `text.trimEnd()`. Replaced `bulletRe` and heading regex with pure string-based parsers (`parseBulletLine`, `parseHeading`) to fully eliminate backtracking risk.
   - **1 unpinned GitHub Action (S7637)**: Pinned all 5 GitHub Actions in `release.yml` to full commit SHAs.
   - **1 PATH search (S4036)**: Resolved `npx` to absolute path via `path.dirname(process.execPath)` in `build-all.js`.
 

@@ -462,33 +462,63 @@ function renderNotice({ projectKey, projectName, version, records, phase, distri
 // ground-truth package list. License texts are not re-verified against the
 // SBOM (they're static SPDX data).
 
+function parseHeading(line) {
+  let hashes = 0;
+  while (hashes < 6 && hashes < line.length && line[hashes] === '#') hashes++;
+  if (hashes === 0 || hashes >= line.length || line[hashes] !== ' ') return null;
+  const text = line.slice(hashes + 1).trim();
+  return text || null;
+}
+
+function parseBulletLine(line) {
+  if (!line.startsWith('- ')) return null;
+  const colonIdx = line.indexOf(' : ');
+  if (colonIdx === -1) return null;
+  const beforeColon = line.slice(2, colonIdx).trim();
+  const licenseName = line.slice(colonIdx + 3).trim();
+  if (!licenseName || !beforeColon) return null;
+  if (beforeColon.startsWith('`')) {
+    const nameEnd = beforeColon.indexOf('`', 1);
+    if (nameEnd === -1) return null;
+    const name = beforeColon.slice(1, nameEnd);
+    const versionPart = beforeColon.slice(nameEnd + 1).trim();
+    const version = versionPart.startsWith('`') && versionPart.endsWith('`')
+      ? versionPart.slice(1, -1)
+      : versionPart;
+    if (!name || !version) return null;
+    return { name, version, licenseName };
+  }
+  const lastSpace = beforeColon.lastIndexOf(' ');
+  if (lastSpace === -1) return null;
+  return {
+    name: beforeColon.slice(0, lastSpace).trim(),
+    version: beforeColon.slice(lastSpace + 1).trim(),
+    licenseName,
+  };
+}
+
 function parseNotice(markdown) {
   const lines = markdown.split(/\r?\n/);
   const components = [];
   let inComponents = false;
-  // Accept either a curly em-dash or an ASCII colon between version and license.
-  // Matches:  - `name` `version` : License Name
-  //           -  name version : License Name    (backticks optional for leniency)
-  const bulletRe = /^-\s+`?([^`]+?)`?\s+`?([^\s`]+)`?\s+:\s+(.+)$/;
 
   for (const raw of lines) {
     const line = raw.replace(/\r$/, '');
-    const heading = line.match(/^(#{1,6})\s+(.+)$/);
-    if (heading) {
-      const title = heading[2].toLowerCase().replaceAll(/\*+/g, '').trim();
+    const headingText = parseHeading(line);
+    if (headingText !== null) {
+      const title = headingText.toLowerCase().replaceAll(/\*+/g, '').trim();
       if (title === 'components' || title.startsWith('components')) {
         inComponents = true;
         continue;
       }
-      // Any later heading ends the section.
       if (inComponents) inComponents = false;
       continue;
     }
     if (!inComponents) continue;
     if (!line.trim() || line.trim() === '---') continue;
-    const m = line.match(bulletRe);
-    if (m) {
-      components.push({ name: m[1].trim(), version: m[2].trim(), licenseName: m[3].trim() });
+    const parsed = parseBulletLine(line);
+    if (parsed) {
+      components.push(parsed);
     }
   }
   return { components };
